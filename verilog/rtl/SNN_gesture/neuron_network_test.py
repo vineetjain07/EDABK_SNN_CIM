@@ -14,8 +14,8 @@ from nvm_parameter import *
 from read_file import *
 
 
-BASE_DIR = "/home/nam/TungDuong/cocotb/tmp/NVM_SNN/mem/connection"
-INPUT_FILE = "/home/nam/TungDuong/cocotb/tmp/NVM_SNN/mem/stimuli/stimuli.txt"
+BASE_DIR = "./mem/connection"
+INPUT_FILE = "./mem/stimuli/stimuli.txt"
 # --- Helper Functions for Wishbone and NVM Access ---
 
 # Wishbone Write: Used to send control or configuration data to the DUT.
