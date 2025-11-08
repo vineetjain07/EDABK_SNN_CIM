@@ -136,6 +136,56 @@ To finalize one classification event, the firmware writes to the **picture-done 
 
 After this point, the firmware can read spikes via Wishbone and interpret them as the output class of the gesture.
 
+## Replicating Locally
+
+### Follow these steps to set up your environment and harden the design:
+
+1. **Clone the Repository:**
+
+```bash
+git clone https://github.com/schizoneko/EDABK_SNN_CIM.git
+```
+
+2. **Prepare Your Environment:**
+
+```bash
+cd EDABK_SNN_CIM
+make setup
+```
+
+3. **Install IPM:**
+
+```bash
+pip install cf-ipm
+```
+
+4. **Install the Neuromorphic X1 IP:**
+
+```bash
+ipm install Neuromorphic_X1_32x32
+```
+
+5. **Edit Behavioral Model Name in IP:**
+
+The cocotb simulation flow uses `verilog/includes/includes.rtl.caravel_user_project` as its source files, which includes a path to the Neuromorphic IP behavioral model. In order to avoid making a second `user_project_wrapper.v`, it is simpler to modify the behavioral model module name from `Neuromorphic_X1` to `Neuromorphic_X1_wb` to align with the stub that is used when actually hardening. With this change, the same `user_project_wrapper.v` works for both (cocotb) testbenching as well as hardening.
+
+In other words, rename line 16...
+```
+File: ip/Neuromorphic_X1_32x32/hdl/beh_model/Neuromorphic_X1_Beh.v
+16: module Neuromorphic_X1_wb (
+```
+
+6. **Harden the Neuron Core:**
+
+```bash
+make neuron_core
+```
+7. **Harden the Design:**
+
+```bash
+make SNN_gesture
+```
+
 ## Documentation
 
 - Details about the Neuromorphic X1 IP: [Neuromorphic X1 documentation](https://github.com/BMsemi/Neuromorphic_X1_32x32)
