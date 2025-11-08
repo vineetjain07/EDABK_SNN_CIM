@@ -1,128 +1,127 @@
 {
-  "//": "Design files",
-  "VERILOG_FILES": [
-    "dir::../../verilog/rtl/defines.v",
-    "dir::../../verilog/rtl/SNN_gesture/hdl/nvm_core_decoder.v",
-    "dir::../../verilog/rtl/SNN_gesture/hdl/nvm_neuron_block.v",
-    "dir::../../verilog/rtl/SNN_gesture/hdl/nvm_neuron_core_64x64.v",
-    "dir::../../verilog/rtl/SNN_gesture/hdl/nvm_neuron_spike_out.v",
-    "dir::../../verilog/rtl/SNN_gesture/hdl/user_project_wrapper.v"
+    "//": "Design files",
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/user_project_wrapper.v"
+    ],
+    "PNR_SDC_FILE": "dir::signoff.sdc",
+    "EXTRA_VERILOG_MODELS": [
+    	"dir::../../ip/Neuromorphic_X1_32x32/hdl/NEUROMORPHIC_X1_stub.v"
   ],
 
-  "MAGIC_EXT_USE_GDS": true,
-  "MAGIC_EXT_ABSTRACT_CELLS": ["Neuromorphic_X1_wb"],
+    "//": "Hardening strategy variables (this is for 1-Macro-First Hardening). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info",
+    "SYNTH_ELABORATE_ONLY": true,
+    "RUN_POST_GPL_DESIGN_REPAIR": false,
+    "RUN_POST_CTS_RESIZER_TIMING": false,
+    "DESIGN_REPAIR_BUFFER_INPUT_PORTS": false,
+    "FP_PDN_ENABLE_RAILS": false,
+    "RUN_ANTENNA_REPAIR": false,
+    "RUN_FILL_INSERTION": false,
+    "RUN_TAP_ENDCAP_INSERTION": false,
+    "RUN_CTS": false,
+    "RUN_IRDROP_REPORT": false,
+    "ERROR_ON_SYNTH_CHECKS": false,
+    "GRT_ALLOW_CONGESTION": true,
+    "ERROR_ON_ILLEGAL_OVERLAPS":false,
+    "ERROR_ON_KLAYOUT_DRC":false,
+    "ERROR_ON_LVS_ERROR":false,
+    "ERROR_ON_MAGIC_DRC":false,
+    "ERROR_ON_TR_DRC":false,
+    "RUN_KLAYOUT_XOR":false,
 
-  "FP_CORE_UTIL": 50,
+    "//": "Macros configurations",
+    "MACROS": {
+        "neuron_core": {
+            "gds": [
+                "dir::../../gds/neuron_core.gds"
+            ],
+            "lef": [
+                "dir::../../lef/neuron_core.lef"
+            ],
+            "instances": {
+                "core": {
+                    "location": [1310, 1785.76],
+                    "orientation": "N"
+                }
+            },
+            "nl": [
+                "dir::../../verilog/gl/neuron_core.v"
+            ],
+            "spef": {
+                "min_*": [
+                    "dir::../../spef/multicorner/neuron_core.min.spef"
+                ],
+                "nom_*": [
+                    "dir::../../spef/multicorner/neuron_core.nom.spef"
+                ],
+                "max_*": [
+                    "dir::../../spef/multicorner/neuron_core.max.spef"
+                ]
+            },
+            "lib": {
+                "*": "dir::../../lib/neuron_core.lib"
+            }
+        },
+	    "Neuromorphic_X1_wb": {
+            "gds": ["dir::../../gds/Neuromorphic_X1_wb.gds"],
+            "lef": ["dir::../../lef/Neuromorphic_X1_wb.lef"],
+            "instances": { 
+          
+            "mprj1": { "location": [515.18, 510], "orientation": "W" }, 
+            "mprj": { "location": [1715.18, 510], "orientation": "E" } 
+            },
+            "lib": { "*": "dir::../../lib/Neuromorphic_X1_wb.lib" }
+        }
+    },
+    "PDN_MACRO_CONNECTIONS": ["mprj vccd2 vssd2 VPWR VGND"],
 
+    "//": "PDN configurations",
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
+    "FP_PDN_VWIDTH": 3.1,
+    "FP_PDN_HWIDTH": 3.1,
+    "FP_PDN_VSPACING": 15.5,
+    "FP_PDN_HSPACING": 15.5,
+    "FP_PDN_VPITCH": 180,
+    "FP_PDN_HPITCH": 180,
+    "QUIT_ON_PDN_VIOLATIONS": false,
 
-  "PNR_SDC_FILE": "dir::signoff.sdc",
+    "//": "Magic variables",
+    "MAGIC_DRC_USE_GDS": true,
+    "MAX_TRANSITION_CONSTRAINT": 0.5,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
+    "GLB_RESIZER_HOLD_SLACK_MARGIN": 0.1,
+    "PL_RESIZER_HOLD_MAX_BUFFER_PERCENT": 40,
+    "GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT": 40,
 
-  "//": "Hardening strategy variables (this is for 3-Top-Level Integration). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info",
-  "SYNTH_ELABORATE_ONLY": false,
-  "RUN_POST_GPL_DESIGN_REPAIR": true,
-  "RUN_POST_CTS_RESIZER_TIMING": true,
-  "DESIGN_REPAIR_BUFFER_INPUT_PORTS": true,
-
-  "//": "Hold fixing parameters",
-  "PL_RESIZER_HOLD_SLACK_MARGIN": 2.0,
-  "GLB_RESIZER_HOLD_SLACK_MARGIN": 1.0,
-  "PL_RESIZER_HOLD_MAX_BUFFER_PERCENT": 50,
-  "GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT": 70,
-  "FP_PDN_ENABLE_RAILS": true,
-  "RUN_ANTENNA_REPAIR": true,
-  "RUN_FILL_INSERTION": true,
-  "RUN_TAP_ENDCAP_INSERTION": true,
-  "RUN_CTS": true,
-  "RUN_IRDROP_REPORT": false,
-
-  "//": "Use custom PDN (compat script: set_voltage_domain + pdngen; no PDN_* envs)",
-  "FP_PDN_CFG": "dir::./pdn_override_2.tcl",
-
-  "//": "Fail the run if power is geometrically open",
-  "ERROR_ON_PDN_VIOLATIONS": true,
-  "IGNORE_DISCONNECTED_MODULES": ["user_project_wrapper"],
-
-  "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
-
-  "//": "Macros configurations",
-  "MACROS": {
-    "Neuromorphic_X1_wb": {
-      "vh": ["dir::../../ip/Neuromorphic_X1_32x32/hdl/NEUROMORPHIC_X1_stub.v"],
-      "gds": ["dir::../../gds/Neuromorphic_X1_wb.gds"],
-      "lef": ["dir::../../lef/Neuromorphic_X1_wb.lef"],
-      "instances": {
-        "X1_inst_0": { "location": [1015.18, 1014.24], "orientation": "N" }, 
-        "X1_inst_1": { "location": [1515.18, 514.24], "orientation": "N" }, 
-        "X1_inst_2": { "location": [515.18, 514.24], "orientation": "N" }, 
-        "X1_inst_3": { "location": [2015.18, 1514.24], "orientation": "N" }      
-      },
-      "lib": { "*": "dir::../../lib/Neuromorphic_X1_wb.lib" }
-    }
-  },
-
-  "//": "Hook macro power pins to Caravel rails (keep consistent with RTL)",
-  "PDN_CONNECT_MACROS_TO_GRID": true,
-  "PDN_MACRO_CONNECTIONS": [
-    "X1_inst_0 vccd1 vssd1 VDDC VSS",
-    "X1_inst_0 vdda1 vssd1 VDDA VSS",
-    "X1_inst_1 vccd1 vssd1 VDDC VSS",
-    "X1_inst_1 vdda1 vssd1 VDDA VSS",
-    "X1_inst_2 vccd1 vssd1 VDDC VSS",
-    "X1_inst_2 vdda1 vssd1 VDDA VSS",
-    "X1_inst_3 vccd1 vssd1 VDDC VSS",
-    "X1_inst_3 vdda1 vssd1 VDDA VSS"
-  ],
-
-  "//": "PDN configurations (straps that land on your met3 pins)",
-  "FP_PDN_VPITCH": 180,
-  "FP_PDN_HPITCH": 180,
-  "FP_PDN_VOFFSET": 20,
-  "FP_PDN_HOFFSET": 46,
-  "FP_PDN_VWIDTH": 6.0,
-  "FP_PDN_HWIDTH": 6.0,
-  "FP_PDN_VSPACING": 15.5,
-  "FP_PDN_HSPACING": 15.5,
-
-  "//": "Core ring inside die bounds",
-  "FP_PDN_CORE_RING": true,
-  "FP_PDN_CORE_RING_VWIDTH": 3.1,
-  "FP_PDN_CORE_RING_HWIDTH": 3.1,
-  "FP_PDN_CORE_RING_VOFFSET": 8.0,
-  "FP_PDN_CORE_RING_HOFFSET": 8.0,
-  "FP_PDN_CORE_RING_VSPACING": 1.7,
-  "FP_PDN_CORE_RING_HSPACING": 1.7,
-
-  "//": "Magic variables",
-  "MAGIC_DRC_USE_GDS": true,
-  "MAGIC_CAPTURE_ERRORS": false,
-  "ERROR_ON_MAGIC_DRC": false,
-
-  "DRT_THREADS": 40,
-  "PL_TARGET_DENSITY_PCT": 8,
-  "MAX_TRANSITION_CONSTRAINT": 1.5,
-
-  "//": "Allow routing congestion to proceed past global routing",
-  "GRT_ALLOW_CONGESTION": false,
-  "GRT_OVERFLOW_ITERS": 150,
-
-  "//": "Will ignore synth",
-  "ERROR_ON_SYNTH_CHECKS": false,
-
-  "//": "Fixed configurations for caravel. You should NOT edit this section",
-  "DESIGN_NAME": "user_project_wrapper",
-  "FP_SIZING": "absolute",
-  "DIE_AREA": [0, 0, 2920, 3520],
-  "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
-
-  "VDD_NETS": ["vccd1", "vdda1"],
-  "GND_NETS": ["vssd1"],
-
-  "CLOCK_PORT": "wb_clk_i",
-  "SIGNOFF_SDC_FILE": "dir::signoff.sdc",
-  "MAGIC_DEF_LABELS": false,
-  "CLOCK_PERIOD": 25,
-  "MAGIC_ZEROIZE_ORIGIN": false,
-
-  "meta": { "version": 2 }
+    "//": "Fixed configurations for Caravel. You should NOT edit this section",
+    "DESIGN_NAME": "user_project_wrapper",
+    "FP_SIZING": "absolute",
+    "DIE_AREA": [0, 0, 2920, 3520],
+    "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
+    "VDD_NETS": [
+        "vccd1",
+        "vccd2",
+        "vdda1",
+        "vdda2"
+    ],
+    "GND_NETS": [
+        "vssd1",
+        "vssd2",
+        "vssa1",
+        "vssa2"
+    ],
+    "FP_PDN_CORE_RING": 1,
+    "FP_PDN_CORE_RING_VWIDTH": 3.1,
+    "FP_PDN_CORE_RING_HWIDTH": 3.1,
+    "FP_PDN_CORE_RING_VOFFSET": 12.45,
+    "FP_PDN_CORE_RING_HOFFSET": 12.45,
+    "FP_PDN_CORE_RING_VSPACING": 1.7,
+    "FP_PDN_CORE_RING_HSPACING": 1.7,
+    "CLOCK_PORT": "wb_clk_i",
+    "SIGNOFF_SDC_FILE": "dir::signoff.sdc",
+    "MAGIC_DEF_LABELS": 0,
+    "CLOCK_PERIOD": 25,
+    "MAGIC_ZEROIZE_ORIGIN": 0,
+    "DEFAULT_CORNER": "nom_tt_025C_1v80"
 }
-

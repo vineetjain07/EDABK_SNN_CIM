@@ -1,4 +1,4 @@
-Clock: clk
+Clock: wb_clk_i
 Sources: wb_clk_i 
 Generated: no
 Virtual: yes
@@ -10,33 +10,33 @@ report_clock_properties
 ============================================================================
 Clock                   Period          Waveform
 ----------------------------------------------------
-clk                  25.000000    0.000000 12.500000
+wb_clk_i             25.000000    0.000000 12.500000
 
 ===========================================================================
 report_clock_latency
 ============================================================================
-Clock clk
+Clock wb_clk_i
 rise -> rise
     min     max
 4.650000 5.570000 source latency
-4.686578         network latency mprj/wb_clk_i
-        5.606578 network latency mprj/wb_clk_i
+5.267373         network latency mprj1/wb_clk_i
+        7.082916 network latency core/_2245_/CLK
 ---------------
-9.336578 11.176579 latency
-        1.840000 skew
+9.917372 12.652916 latency
+        2.735543 skew
 
 fall -> fall
     min     max
 4.650000 5.570000 source latency
-4.686576         network latency mprj/wb_clk_i
-        5.606577 network latency mprj/wb_clk_i
+5.266078         network latency mprj1/wb_clk_i
+        7.382719 network latency core/_2245_/CLK
 ---------------
-9.336576 11.176577 latency
-        1.840000 skew
+9.916077 12.952719 latency
+        3.036641 skew
 
 
 
 ===========================================================================
 report_clock_min_period
 ============================================================================
-clk period_min = 0.00 fmax = inf
+wb_clk_i period_min = 6.47 fmax = 154.58

@@ -4,6 +4,11 @@ Clock Skew (Hold)
 ============================================================================
 ======================= max_tt_025C_1v80 Corner ===================================
 
-Clock clk
-No launch/capture paths found.
+Clock wb_clk_i
+5.399555 source latency mprj1/wb_clk_i ^
+-7.290524 target latency core/_2245_/CLK ^
+-0.250000 clock uncertainty
+-0.920000 CRPR
+--------------
+-3.060969 hold skew
 

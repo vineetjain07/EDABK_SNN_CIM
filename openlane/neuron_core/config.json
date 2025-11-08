@@ -1,0 +1,30 @@
+{
+  "//": "Design files",
+  "VERILOG_FILES": [
+    "dir::../../verilog/rtl/defines.v",
+    "dir::../../verilog/rtl/neuron_core/hdl/nvm_core_decoder.v",
+    "dir::../../verilog/rtl/neuron_core/hdl/nvm_neuron_block.v",
+    "dir::../../verilog/rtl/neuron_core/hdl/nvm_neuron_spike_out.v",
+    "dir::../../verilog/rtl/neuron_core/hdl/neuron_core.v"
+  ],
+    "FP_CORE_UTIL": 10,
+    "GRT_ANTENNA_ITERS": 20,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "HEURISTIC_ANTENNA_THRESHOLD": 200,
+    "DESIGN_REPAIR_MAX_WIRE_LENGTH": 800,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 2,
+    "PL_RESIZER_HOLD_MAX_BUFFER_PCT": 50,
+    "PL_RESIZER_ALLOW_SETUP_VIOS": true,
+    "RUN_POST_GRT_RESIZER_TIMING": true,
+    "GRT_RESIZER_HOLD_SLACK_MARGIN": 2,
+    "PL_RESIZER_FIX_HOLD_FIRST": true,
+    "FP_PDN_MULTILAYER": false,
+
+  "DESIGN_NAME": "neuron_core",
+
+  "CLOCK_PORT": "wb_clk_i",
+  "CLOCK_PERIOD": 25,
+  "DEFAULT_CORNER": "nom_tt_025C_1v80"
+}
+

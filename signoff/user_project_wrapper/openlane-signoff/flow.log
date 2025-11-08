@@ -1,111 +1,504 @@
 Starting…
-Running 'Verilator.Lint' at 'user_project_wrapper/runs/25_11_02_18_07/01-verilator-lint'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/01-verilator-lint/verilator-lint.log'[/repr.filename]…
-Running 'Checker.LintTimingConstructs' at 'user_project_wrapper/runs/25_11_02_18_07/02-checker-linttimingconstructs'…
+Running 'Verilator.Lint' at 'SNN_gesture/runs/25_11_08_21_28/01-verilator-lint'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/01-verilator-lint/verilator-lint.log'[/repr.filename]…
+Running 'Checker.LintTimingConstructs' at 'SNN_gesture/runs/25_11_08_21_28/02-checker-linttimingconstructs'…
 Check for Lint Timing Errors clear.
-Running 'Checker.LintErrors' at 'user_project_wrapper/runs/25_11_02_18_07/03-checker-linterrors'…
+Running 'Checker.LintErrors' at 'SNN_gesture/runs/25_11_08_21_28/03-checker-linterrors'…
 Check for Lint errors clear.
-Running 'Checker.LintWarnings' at 'user_project_wrapper/runs/25_11_02_18_07/04-checker-lintwarnings'…
-9 Lint warnings found.
-Running 'Yosys.JsonHeader' at 'user_project_wrapper/runs/25_11_02_18_07/05-yosys-jsonheader'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/05-yosys-jsonheader/yosys-jsonheader.log'[/repr.filename]…
-Running 'Yosys.Synthesis' at 'user_project_wrapper/runs/25_11_02_18_07/06-yosys-synthesis'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/06-yosys-synthesis/yosys-synthesis.log'[/repr.filename]…
+Running 'Checker.LintWarnings' at 'SNN_gesture/runs/25_11_08_21_28/04-checker-lintwarnings'…
+18 Lint warnings found.
+Running 'Yosys.JsonHeader' at 'SNN_gesture/runs/25_11_08_21_28/05-yosys-jsonheader'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/05-yosys-jsonheader/yosys-jsonheader.log'[/repr.filename]…
+Running 'Yosys.Synthesis' at 'SNN_gesture/runs/25_11_08_21_28/06-yosys-synthesis'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/06-yosys-synthesis/yosys-synthesis.log'[/repr.filename]…
 Parsing synthesis checks…
-Running 'Checker.YosysUnmappedCells' at 'user_project_wrapper/runs/25_11_02_18_07/07-checker-yosysunmappedcells'…
+Running 'Checker.YosysUnmappedCells' at 'SNN_gesture/runs/25_11_08_21_28/07-checker-yosysunmappedcells'…
 Check for Unmapped Yosys instances clear.
-Running 'Checker.YosysSynthChecks' at 'user_project_wrapper/runs/25_11_02_18_07/08-checker-yosyssynthchecks'…
+Running 'Checker.YosysSynthChecks' at 'SNN_gesture/runs/25_11_08_21_28/08-checker-yosyssynthchecks'…
 Check for Yosys check errors clear.
-Running 'Checker.NetlistAssignStatements' at 'user_project_wrapper/runs/25_11_02_18_07/09-checker-netlistassignstatements'…
-Running 'OpenROAD.CheckSDCFiles' at 'user_project_wrapper/runs/25_11_02_18_07/10-openroad-checksdcfiles'…
-Running 'OpenROAD.CheckMacroInstances' at 'user_project_wrapper/runs/25_11_02_18_07/11-openroad-checkmacroinstances'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/11-openroad-checkmacroinstances/openroad-checkmacroinstances.log'[/repr.filename]…
-Running 'OpenROAD.STAPrePNR' at 'user_project_wrapper/runs/25_11_02_18_07/12-openroad-staprepnr'…
+Running 'Checker.NetlistAssignStatements' at 'SNN_gesture/runs/25_11_08_21_28/09-checker-netlistassignstatements'…
+Running 'OpenROAD.CheckSDCFiles' at 'SNN_gesture/runs/25_11_08_21_28/10-openroad-checksdcfiles'…
+Running 'OpenROAD.CheckMacroInstances' at 'SNN_gesture/runs/25_11_08_21_28/11-openroad-checkmacroinstances'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/11-openroad-checkmacroinstances/openroad-checkmacroinstances.log'[/repr.filename]…
+Running 'OpenROAD.STAPrePNR' at 'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr'…
 Starting STA for the nom_tt_025C_1v80 timing corner…
 Starting STA for the nom_ss_100C_1v60 timing corner…
 Starting STA for the nom_ff_n40C_1v95 timing corner…
-Skipping corner min_tt_025C_1v80 for STA (identical to nom_tt_025C_1v80 at this stage)…
-Skipping corner min_ss_100C_1v60 for STA (identical to nom_ss_100C_1v60 at this stage)…
-Skipping corner min_ff_n40C_1v95 for STA (identical to nom_ff_n40C_1v95 at this stage)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
-Skipping corner max_tt_025C_1v80 for STA (identical to nom_tt_025C_1v80 at this stage)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
-Skipping corner max_ss_100C_1v60 for STA (identical to nom_ss_100C_1v60 at this stage)…
-Skipping corner max_ff_n40C_1v95 for STA (identical to nom_ff_n40C_1v95 at this stage)…
-Finished STA for the nom_tt_025C_1v80 timing corner.
+Starting STA for the min_tt_025C_1v80 timing corner…
+Starting STA for the min_ss_100C_1v60 timing corner…
+Starting STA for the min_ff_n40C_1v95 timing corner…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
+Starting STA for the max_tt_025C_1v80 timing corner…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
+Starting STA for the max_ss_100C_1v60 timing corner…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/min_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/min_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/min_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/max_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/max_ss_100C_1v60/sta.log'[/repr.filename]…
+Finished STA for the min_tt_025C_1v80 timing corner.
+Starting STA for the max_ff_n40C_1v95 timing corner…
+Finished STA for the min_ff_n40C_1v95 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/12-openroad-staprepnr/max_ff_n40C_1v95/sta.log'[/repr.filename]…
+Finished STA for the max_ss_100C_1v60 timing corner.
 Finished STA for the nom_ff_n40C_1v95 timing corner.
 Finished STA for the nom_ss_100C_1v60 timing corner.
-Running 'OpenROAD.Floorplan' at 'user_project_wrapper/runs/25_11_02_18_07/13-openroad-floorplan'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/13-openroad-floorplan/openroad-floorplan.log'[/repr.filename]…
+Finished STA for the min_ss_100C_1v60 timing corner.
+Finished STA for the nom_tt_025C_1v80 timing corner.
+Finished STA for the max_tt_025C_1v80 timing corner.
+Finished STA for the max_ff_n40C_1v95 timing corner.
+Running 'OpenROAD.Floorplan' at 'SNN_gesture/runs/25_11_08_21_28/13-openroad-floorplan'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/13-openroad-floorplan/openroad-floorplan.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Odb.CheckMacroAntennaProperties' at 'user_project_wrapper/runs/25_11_02_18_07/14-odb-checkmacroantennaproperties'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/14-odb-checkmacroantennaproperties/odb-checkmacroantennaproperties.log'[/repr.filename]…
-Cell 'Neuromorphic_X1_wb' has (91) input pin(s) without antenna gate information. They might not be connected to a gate.
-Cell 'Neuromorphic_X1_wb' has (34) output pin(s) without antenna diffusion information. They might not be driven.
-Running 'Odb.SetPowerConnections' at 'user_project_wrapper/runs/25_11_02_18_07/15-odb-setpowerconnections'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/15-odb-setpowerconnections/odb-setpowerconnections.log'[/repr.filename]…
-Running 'Odb.ManualMacroPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/16-odb-manualmacroplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/16-odb-manualmacroplacement/odb-manualmacroplacement.log'[/repr.filename]…
-Running 'OpenROAD.CutRows' at 'user_project_wrapper/runs/25_11_02_18_07/17-openroad-cutrows'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/17-openroad-cutrows/openroad-cutrows.log'[/repr.filename]…
+Running 'Odb.CheckMacroAntennaProperties' at 'SNN_gesture/runs/25_11_08_21_28/14-odb-checkmacroantennaproperties'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/14-odb-checkmacroantennaproperties/odb-checkmacroantennaproperties.log'[/repr.filename]…
+Cell 'neuron_core' has (3) inout pin(s) without anetnna gate information not antenna diffusion information. They might be disconnected.
+Cell 'neuron_core' has (151) input pin(s) without antenna gate information. They might not be connected to a gate.
+Running 'Odb.SetPowerConnections' at 'SNN_gesture/runs/25_11_08_21_28/15-odb-setpowerconnections'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/15-odb-setpowerconnections/odb-setpowerconnections.log'[/repr.filename]…
+Running 'Odb.ManualMacroPlacement' at 'SNN_gesture/runs/25_11_08_21_28/16-odb-manualmacroplacement'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/16-odb-manualmacroplacement/odb-manualmacroplacement.log'[/repr.filename]…
+Running 'OpenROAD.CutRows' at 'SNN_gesture/runs/25_11_08_21_28/17-openroad-cutrows'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/17-openroad-cutrows/openroad-cutrows.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 Gating variable for step 'OpenROAD.TapEndcapInsertion' set to 'False'- the step will be skipped.
 Skipping step 'Tap/Decap Insertion'…
-Running 'Odb.AddPDNObstructions' at 'user_project_wrapper/runs/25_11_02_18_07/18-odb-addpdnobstructions'…
+Running 'Odb.AddPDNObstructions' at 'SNN_gesture/runs/25_11_08_21_28/18-odb-addpdnobstructions'…
 'PDN_OBSTRUCTIONS' is not defined. Skipping 'Odb.AddPDNObstructions'…
-Running 'OpenROAD.GeneratePDN' at 'user_project_wrapper/runs/25_11_02_18_07/19-openroad-generatepdn'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/19-openroad-generatepdn/openroad-generatepdn.log'[/repr.filename]…
+Running 'OpenROAD.GeneratePDN' at 'SNN_gesture/runs/25_11_08_21_28/19-openroad-generatepdn'…
+'FP_PDN_CFG' not explicitly set, setting it to /nix/store/pqxyc4xmydcs5adig47yyc29r3svp5nx-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/openroad/common/pdn_cfg.tcl…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/19-openroad-generatepdn/openroad-generatepdn.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [PDN-0239] Core ring shape falls outside the die bounds.
-Running 'Odb.RemovePDNObstructions' at 'user_project_wrapper/runs/25_11_02_18_07/20-odb-removepdnobstructions'…
+[PDN-0110] No via inserted between met4 and met5 at (1331.0400, 2174.3300) - (1332.6400, 2174.9600) on vccd1
+[PDN-0110] No via inserted between met4 and met5 at (1484.6400, 2174.3300) - (1486.2400, 2174.9600) on vccd1
+[PDN-0110] No via inserted between met4 and met5 at (1638.2400, 2174.3300) - (1639.8400, 2174.9600) on vccd1
+[PSM-0038] Unconnected node on net vccd1 at location (553.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (555.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (559.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (718.610um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (718.610um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (724.610um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (724.610um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (725.890um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (725.890um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (731.890um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (731.890um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (733.170um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (733.170um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (739.170um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (739.170um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (740.450um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (740.450um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (746.450um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (746.450um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (747.730um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (747.730um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (753.730um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (753.730um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (755.010um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (755.010um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (761.010um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (761.010um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (762.290um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (762.290um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (768.290um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (768.290um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (769.570um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (769.570um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (775.570um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (775.570um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (776.850um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (776.850um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (782.850um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (782.850um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (784.130um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (784.130um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (790.130um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (790.130um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (791.410um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (791.410um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (797.410um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (797.410um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (798.690um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (798.690um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (804.690um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (804.690um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (805.970um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (805.970um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (811.970um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (811.970um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (813.250um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (813.250um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (819.250um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (819.250um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (820.530um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (820.530um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (826.530um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (826.530um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (827.810um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (827.810um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (833.810um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (833.810um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (844.255um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (845.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1149.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1228.035um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1328.035um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1418.410um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1761.950um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1852.325um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1952.325um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2030.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2334.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2336.105um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2346.550um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2346.550um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2352.550um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2352.550um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2353.830um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2353.830um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2359.830um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2359.830um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2361.110um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2361.110um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2367.110um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2367.110um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2368.390um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2368.390um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2374.390um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2374.390um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2375.670um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2375.670um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2381.670um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2381.670um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2382.950um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2382.950um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2388.950um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2388.950um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2390.230um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2390.230um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2396.230um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2396.230um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2397.510um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2397.510um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2403.510um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2403.510um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2404.790um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2404.790um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2410.790um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2410.790um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2412.070um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2412.070um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2418.070um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2418.070um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2419.350um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2419.350um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2425.350um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2425.350um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2426.630um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2426.630um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2432.630um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2432.630um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2433.910um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2433.910um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2439.910um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2439.910um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2441.190um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2441.190um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2447.190um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2447.190um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2448.470um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2448.470um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2454.470um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2454.470um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2455.750um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2455.750um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2461.750um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2461.750um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2621.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2625.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2627.335um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VDDC at location (796.695um, 879.875um).
+[PSM-0039] Unconnected instance mprj/VDDC at location (2383.664um, 900.124um).
+[PSM-0069] Check connectivity failed on vccd1.
+Grid check for vccd1 failed: PSM-0069
+[PSM-0038] Unconnected node on net vdda1 at location (884.600um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (887.600um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (904.220um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (906.830um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (912.735um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (919.195um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (925.660um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (950.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (953.070um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (955.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (960.070um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2220.290um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2224.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2227.290um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2229.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2254.700um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2261.165um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2267.625um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2273.530um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2276.140um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2292.760um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2295.760um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VDDA at location (923.647um, 890.000um).
+[PSM-0039] Unconnected instance mprj/VDDA at location (2256.712um, 890.000um).
+[PSM-0069] Check connectivity failed on vdda1.
+Grid check for vdda1 failed: PSM-0069
+[PSM-0038] Unconnected node on net vssd1 at location (557.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (561.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (565.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (567.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (569.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (571.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (590.705um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (600.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (602.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (604.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (606.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (608.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (613.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (615.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (617.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (621.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (623.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (628.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (630.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (632.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (636.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (638.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (642.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (644.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (648.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (650.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (652.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (661.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (663.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (667.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (669.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (701.245um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (713.825um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (721.610um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (721.610um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (728.890um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (728.890um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (736.170um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (736.170um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (743.450um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (743.450um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (750.730um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (750.730um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (758.010um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (758.010um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (765.290um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (765.290um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (772.570um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (772.570um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (779.850um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (779.850um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (787.130um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (787.130um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (794.410um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (794.410um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (801.690um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (801.690um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (808.970um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (808.970um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (816.250um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (816.250um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (823.530um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (823.530um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (830.810um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (830.810um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (836.185um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (841.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (849.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (857.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (871.330um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (873.630um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (890.425um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (897.115um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (909.850um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (915.730um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (940.795um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (977.580um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1001.460um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1004.160um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1028.040um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1030.740um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1054.620um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1057.320um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1081.200um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1083.900um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1107.780um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1153.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1231.635um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1331.635um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1422.010um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1758.350um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1848.725um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1948.725um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2027.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2072.580um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2096.460um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2099.160um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2123.040um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2125.740um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2149.620um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2152.320um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2176.200um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2178.900um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2202.780um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2239.565um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2264.630um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2270.510um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2283.245um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2289.935um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2306.730um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2309.030um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2322.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2330.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2338.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2344.175um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2349.550um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2349.550um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2356.830um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2356.830um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2364.110um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2364.110um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2371.390um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2371.390um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2378.670um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2378.670um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2385.950um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2385.950um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2393.230um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2393.230um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2400.510um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2400.510um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2407.790um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2407.790um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2415.070um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2415.070um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2422.350um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2422.350um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2429.630um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2429.630um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2436.910um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2436.910um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2444.190um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2444.190um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2451.470um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2451.470um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2458.750um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2458.750um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2466.535um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2479.115um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2511.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2513.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2517.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2519.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2527.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2529.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2531.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2535.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2537.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2541.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2543.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2547.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2549.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2551.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2556.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2558.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2562.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2564.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2566.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2572.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2574.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2576.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2578.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2580.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2589.655um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2608.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2610.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2612.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2614.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2619.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2623.335um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VSS at location (785.207um, 884.293um).
+[PSM-0039] Unconnected instance mprj/VSS at location (2395.152um, 895.706um).
+[PSM-0069] Check connectivity failed on vssd1.
+Grid check for vssd1 failed: PSM-0069
+Running 'Odb.RemovePDNObstructions' at 'SNN_gesture/runs/25_11_08_21_28/20-odb-removepdnobstructions'…
 'PDN_OBSTRUCTIONS' is not defined. Skipping 'Odb.RemovePDNObstructions'…
-Running 'Odb.AddRoutingObstructions' at 'user_project_wrapper/runs/25_11_02_18_07/21-odb-addroutingobstructions'…
+Running 'Odb.AddRoutingObstructions' at 'SNN_gesture/runs/25_11_08_21_28/21-odb-addroutingobstructions'…
 'ROUTING_OBSTRUCTIONS' is not defined. Skipping 'Odb.AddRoutingObstructions'…
-Running 'OpenROAD.GlobalPlacementSkipIO' at 'user_project_wrapper/runs/25_11_02_18_07/22-openroad-globalplacementskipio'…
-I/O pins were loaded from /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping the first global placement iteration…
-Running 'OpenROAD.IOPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/23-openroad-ioplacement'…
-I/O pins were loaded from /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping OpenROAD.IOPlacement…
-Running 'Odb.CustomIOPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/24-odb-customioplacement'…
+Running 'OpenROAD.GlobalPlacementSkipIO' at 'SNN_gesture/runs/25_11_08_21_28/22-openroad-globalplacementskipio'…
+I/O pins were loaded from /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/fixed_dont_change/user_project_wrapper.def. Skipping the first global placement iteration…
+Running 'OpenROAD.IOPlacement' at 'SNN_gesture/runs/25_11_08_21_28/23-openroad-ioplacement'…
+I/O pins were loaded from /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/fixed_dont_change/user_project_wrapper.def. Skipping OpenROAD.IOPlacement…
+Running 'Odb.CustomIOPlacement' at 'SNN_gesture/runs/25_11_08_21_28/24-odb-customioplacement'…
 No custom floorplan file configured, skipping…
-Running 'Odb.ApplyDEFTemplate' at 'user_project_wrapper/runs/25_11_02_18_07/25-odb-applydeftemplate'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/25-odb-applydeftemplate/odb-applydeftemplate.log'[/repr.filename]…
-Running 'OpenROAD.GlobalPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/26-openroad-globalplacement'…
-'PL_TARGET_DENSITY_PCT' not explicitly set, using dynamically calculated target density: 17.0965300…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/26-openroad-globalplacement/openroad-globalplacement.log'[/repr.filename]…
+Running 'Odb.ApplyDEFTemplate' at 'SNN_gesture/runs/25_11_08_21_28/25-odb-applydeftemplate'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/25-odb-applydeftemplate/odb-applydeftemplate.log'[/repr.filename]…
+Bterm vssa2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssa1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda1 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd1 is declared as a 'POWER' pin. It will be ignored.
+Running 'OpenROAD.GlobalPlacement' at 'SNN_gesture/runs/25_11_08_21_28/26-openroad-globalplacement'…
+'PL_TARGET_DENSITY_PCT' not explicitly set, using dynamically calculated target density: 25.741300…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/26-openroad-globalplacement/openroad-globalplacement.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 All instances are FIXED/FIRM.
 No need to perform global placement.
 Skipping…
-Running 'Odb.WriteVerilogHeader' at 'user_project_wrapper/runs/25_11_02_18_07/27-odb-writeverilogheader'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/27-odb-writeverilogheader/odb-writeverilogheader.log'[/repr.filename]…
-Running 'Checker.PowerGridViolations' at 'user_project_wrapper/runs/25_11_02_18_07/28-checker-powergridviolations'…
-Check for power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) clear.
-Running 'OpenROAD.STAMidPNR' at 'user_project_wrapper/runs/25_11_02_18_07/29-openroad-stamidpnr'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/29-openroad-stamidpnr/openroad-stamidpnr.log'[/repr.filename]…
+Running 'Odb.WriteVerilogHeader' at 'SNN_gesture/runs/25_11_08_21_28/27-odb-writeverilogheader'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/27-odb-writeverilogheader/odb-writeverilogheader.log'[/repr.filename]…
+Running 'Checker.PowerGridViolations' at 'SNN_gesture/runs/25_11_08_21_28/28-checker-powergridviolations'…
+27124 power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) found.
+Running 'OpenROAD.STAMidPNR' at 'SNN_gesture/runs/25_11_08_21_28/29-openroad-stamidpnr'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/29-openroad-stamidpnr/openroad-stamidpnr.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
 Gating variable for step 'OpenROAD.RepairDesignPostGPL' set to 'False'- the step will be skipped.
 Skipping step 'Repair Design (Post-Global Placement)'…
-Running 'Odb.ManualGlobalPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/30-odb-manualglobalplacement'…
+Running 'Odb.ManualGlobalPlacement' at 'SNN_gesture/runs/25_11_08_21_28/30-odb-manualglobalplacement'…
 'MANUAL_GLOBAL_PLACEMENTS' not set, skipping…
-Running 'OpenROAD.DetailedPlacement' at 'user_project_wrapper/runs/25_11_02_18_07/31-openroad-detailedplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/31-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
+Running 'OpenROAD.DetailedPlacement' at 'SNN_gesture/runs/25_11_08_21_28/31-openroad-detailedplacement'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/31-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 Gating variable for step 'OpenROAD.CTS' set to 'False'- the step will be skipped.
 Skipping step 'Clock Tree Synthesis'…
-Running 'OpenROAD.STAMidPNR-1' at 'user_project_wrapper/runs/25_11_02_18_07/32-openroad-stamidpnr-1'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/32-openroad-stamidpnr-1/openroad-stamidpnr-1.log'[/repr.filename]…
+Running 'OpenROAD.STAMidPNR-1' at 'SNN_gesture/runs/25_11_08_21_28/32-openroad-stamidpnr-1'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/32-openroad-stamidpnr-1/openroad-stamidpnr-1.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
 Gating variable for step 'OpenROAD.ResizerTimingPostCTS' set to 'False'- the step will be skipped.
 Skipping step 'Resizer Timing Optimizations (Post-Clock Tree Synthesis)'…
-Running 'OpenROAD.STAMidPNR-2' at 'user_project_wrapper/runs/25_11_02_18_07/33-openroad-stamidpnr-2'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/33-openroad-stamidpnr-2/openroad-stamidpnr-2.log'[/repr.filename]…
+Running 'OpenROAD.STAMidPNR-2' at 'SNN_gesture/runs/25_11_08_21_28/33-openroad-stamidpnr-2'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/33-openroad-stamidpnr-2/openroad-stamidpnr-2.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
-Running 'OpenROAD.GlobalRouting' at 'user_project_wrapper/runs/25_11_02_18_07/34-openroad-globalrouting'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/34-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
+Running 'OpenROAD.GlobalRouting' at 'SNN_gesture/runs/25_11_08_21_28/34-openroad-globalrouting'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/34-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
@@ -945,109 +1338,6 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/3
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
@@ -1250,189 +1540,398 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/3
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
@@ -1625,12 +2124,28 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/3
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
-Running 'OpenROAD.CheckAntennas' at 'user_project_wrapper/runs/25_11_02_18_07/35-openroad-checkantennas'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/35-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] message limit reached, this message will no longer print
+[GRT-0115] Global routing finished with overflow.
+Running 'OpenROAD.CheckAntennas' at 'SNN_gesture/runs/25_11_08_21_28/35-openroad-checkantennas'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/35-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 Gating variable for step 'OpenROAD.RepairDesignPostGRT' set to 'False'- the step will be skipped.
 Skipping step 'Repair Design (Post-Global Routing)'…
-Running 'Odb.DiodesOnPorts' at 'user_project_wrapper/runs/25_11_02_18_07/36-odb-diodesonports'…
+Running 'Odb.DiodesOnPorts' at 'SNN_gesture/runs/25_11_08_21_28/36-odb-diodesonports'…
 'DIODE_ON_PORTS' is set to 'none': skipping…
 Gating variable for step 'Odb.HeuristicDiodeInsertion' set to 'False'- the step will be skipped.
 Skipping step 'Heuristic Diode Insertion'…
@@ -1638,12 +2153,14 @@ Gating variable for step 'OpenROAD.RepairAntennas' set to 'False'- the step will
 Skipping step 'Antenna Repair'…
 Gating variable for step 'OpenROAD.ResizerTimingPostGRT' set to 'False'- the step will be skipped.
 Skipping step 'Resizer Timing Optimizations (Post-Global Routing)'…
-Running 'OpenROAD.STAMidPNR-3' at 'user_project_wrapper/runs/25_11_02_18_07/37-openroad-stamidpnr-3'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/37-openroad-stamidpnr-3/openroad-stamidpnr-3.log'[/repr.filename]…
+Running 'OpenROAD.STAMidPNR-3' at 'SNN_gesture/runs/25_11_08_21_28/37-openroad-stamidpnr-3'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/37-openroad-stamidpnr-3/openroad-stamidpnr-3.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.DetailedRouting' at 'user_project_wrapper/runs/25_11_02_18_07/38-openroad-detailedrouting'…
+Running 'OpenROAD.DetailedRouting' at 'SNN_gesture/runs/25_11_08_21_28/38-openroad-detailedrouting'…
 Running TritonRoute with 8 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/38-openroad-detailedrouting/openroad-detailedrouting.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/38-openroad-detailedrouting/openroad-detailedrouting.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
@@ -1655,117 +2172,121 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/3
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
-Running 'Odb.RemoveRoutingObstructions' at 'user_project_wrapper/runs/25_11_02_18_07/39-odb-removeroutingobstructions'…
+Running 'Odb.RemoveRoutingObstructions' at 'SNN_gesture/runs/25_11_08_21_28/39-odb-removeroutingobstructions'…
 'ROUTING_OBSTRUCTIONS' is not defined. Skipping 'Odb.RemoveRoutingObstructions'…
-Running 'OpenROAD.CheckAntennas-1' at 'user_project_wrapper/runs/25_11_02_18_07/40-openroad-checkantennas-1'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/40-openroad-checkantennas-1/openroad-checkantennas-1.log'[/repr.filename]…
+Running 'OpenROAD.CheckAntennas-1' at 'SNN_gesture/runs/25_11_08_21_28/40-openroad-checkantennas-1'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/40-openroad-checkantennas-1/openroad-checkantennas-1.log'[/repr.filename]…
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Checker.TrDRC' at 'user_project_wrapper/runs/25_11_02_18_07/41-checker-trdrc'…
-Check for Routing DRC errors clear.
-Running 'Odb.ReportDisconnectedPins' at 'user_project_wrapper/runs/25_11_02_18_07/42-odb-reportdisconnectedpins'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/42-odb-reportdisconnectedpins/odb-reportdisconnectedpins.log'[/repr.filename]…
-Running 'Checker.DisconnectedPins' at 'user_project_wrapper/runs/25_11_02_18_07/43-checker-disconnectedpins'…
+Running 'Checker.TrDRC' at 'SNN_gesture/runs/25_11_08_21_28/41-checker-trdrc'…
+1 Routing DRC errors found.
+Running 'Odb.ReportDisconnectedPins' at 'SNN_gesture/runs/25_11_08_21_28/42-odb-reportdisconnectedpins'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/42-odb-reportdisconnectedpins/odb-reportdisconnectedpins.log'[/repr.filename]…
+Running 'Checker.DisconnectedPins' at 'SNN_gesture/runs/25_11_08_21_28/43-checker-disconnectedpins'…
 Check for critical disconnected pins clear.
-Running 'Odb.ReportWireLength' at 'user_project_wrapper/runs/25_11_02_18_07/44-odb-reportwirelength'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/44-odb-reportwirelength/odb-reportwirelength.log'[/repr.filename]…
-Running 'Checker.WireLength' at 'user_project_wrapper/runs/25_11_02_18_07/45-checker-wirelength'…
+Running 'Odb.ReportWireLength' at 'SNN_gesture/runs/25_11_08_21_28/44-odb-reportwirelength'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/44-odb-reportwirelength/odb-reportwirelength.log'[/repr.filename]…
+Running 'Checker.WireLength' at 'SNN_gesture/runs/25_11_08_21_28/45-checker-wirelength'…
 Threshold for Threshold-surpassing long wires is not set. The checker will be skipped.
 Gating variable for step 'OpenROAD.FillInsertion' set to 'False'- the step will be skipped.
 Skipping step 'Fill Insertion'…
-Running 'Odb.CellFrequencyTables' at 'user_project_wrapper/runs/25_11_02_18_07/46-odb-cellfrequencytables'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/46-odb-cellfrequencytables/buffer_list.txt'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/46-odb-cellfrequencytables/odb-cellfrequencytables.log'[/repr.filename]…
-Running 'OpenROAD.RCX' at 'user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx'…
-Running RCX for corners matching nom_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/nom/rcx.log)…
-Running RCX for corners matching min_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/min/rcx.log)…
-Running RCX for corners matching max_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/max/rcx.log)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/nom/rcx.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/max/rcx.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/47-openroad-rcx/min/rcx.log'[/repr.filename]…
-Finished RCX for corners matching nom_*.
+Running 'Odb.CellFrequencyTables' at 'SNN_gesture/runs/25_11_08_21_28/46-odb-cellfrequencytables'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/46-odb-cellfrequencytables/buffer_list.txt'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/46-odb-cellfrequencytables/odb-cellfrequencytables.log'[/repr.filename]…
+Running 'OpenROAD.RCX' at 'SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx'…
+Running RCX for corners matching nom_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/nom/rcx.log)…
+Running RCX for corners matching max_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/max/rcx.log)…
+Running RCX for corners matching min_* (/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/min/rcx.log)…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/max/rcx.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/nom/rcx.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/47-openroad-rcx/min/rcx.log'[/repr.filename]…
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
 Finished RCX for corners matching max_*.
+Finished RCX for corners matching nom_*.
 Finished RCX for corners matching min_*.
-Running 'OpenROAD.STAPostPNR' at 'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr'…
+Running 'OpenROAD.STAPostPNR' at 'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr'…
 Starting STA for the nom_tt_025C_1v80 timing corner…
 Starting STA for the nom_ss_100C_1v60 timing corner…
 Starting STA for the nom_ff_n40C_1v95 timing corner…
 Starting STA for the min_tt_025C_1v80 timing corner…
 Starting STA for the min_ss_100C_1v60 timing corner…
 Starting STA for the min_ff_n40C_1v95 timing corner…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
 Starting STA for the max_tt_025C_1v80 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
 Starting STA for the max_ss_100C_1v60 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_ff_n40C_1v95/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_tt_025C_1v80/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_tt_025C_1v80/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_ss_100C_1v60/sta.log'[/repr.filename]…
-Finished STA for the nom_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_tt_025C_1v80/sta.log'[/repr.filename]…
 Finished STA for the min_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
-Finished STA for the max_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
-Finished STA for the max_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
 Finished STA for the min_ff_n40C_1v95 timing corner.
-Finished STA for the nom_ff_n40C_1v95 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
+Finished STA for the max_tt_025C_1v80 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Finished STA for the nom_tt_025C_1v80 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
 Finished STA for the min_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/min_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/min_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
 Finished STA for the nom_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/nom_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Finished STA for the max_ss_100C_1v60 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Finished STA for the nom_ff_n40C_1v95 timing corner.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/nom_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
 Starting STA for the max_ff_n40C_1v95 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_ff_n40C_1v95/sta.log'[/repr.filename]…
 Finished STA for the max_ff_n40C_1v95 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/48-openroad-stapostpnr/max_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/48-openroad-stapostpnr/max_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
 Gating variable for step 'OpenROAD.IRDropReport' set to 'False'- the step will be skipped.
 Skipping step 'IR Drop Report'…
-Running 'Magic.StreamOut' at 'user_project_wrapper/runs/25_11_02_18_07/49-magic-streamout'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/49-magic-streamout/Neuromorphic_X1_wb.get_bbox.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/49-magic-streamout/magic-streamout.log'[/repr.filename]…
-Running 'KLayout.StreamOut' at 'user_project_wrapper/runs/25_11_02_18_07/50-klayout-streamout'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/50-klayout-streamout/klayout-streamout.log'[/repr.filename]…
-Running 'Magic.WriteLEF' at 'user_project_wrapper/runs/25_11_02_18_07/51-magic-writelef'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/51-magic-writelef/magic-writelef.log'[/repr.filename]…
-Running 'Odb.CheckDesignAntennaProperties' at 'user_project_wrapper/runs/25_11_02_18_07/52-odb-checkdesignantennaproperties'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/52-odb-checkdesignantennaproperties/odb-checkdesignantennaproperties.log'[/repr.filename]…
+Running 'Magic.StreamOut' at 'SNN_gesture/runs/25_11_08_21_28/49-magic-streamout'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/49-magic-streamout/neuron_core.get_bbox.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/49-magic-streamout/Neuromorphic_X1_wb.get_bbox.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/49-magic-streamout/magic-streamout.log'[/repr.filename]…
+Running 'KLayout.StreamOut' at 'SNN_gesture/runs/25_11_08_21_28/50-klayout-streamout'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/50-klayout-streamout/klayout-streamout.log'[/repr.filename]…
+Running 'Magic.WriteLEF' at 'SNN_gesture/runs/25_11_08_21_28/51-magic-writelef'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/51-magic-writelef/magic-writelef.log'[/repr.filename]…
+Running 'Odb.CheckDesignAntennaProperties' at 'SNN_gesture/runs/25_11_08_21_28/52-odb-checkdesignantennaproperties'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/52-odb-checkdesignantennaproperties/odb-checkdesignantennaproperties.log'[/repr.filename]…
 Cell 'user_project_wrapper' has (29) inout pin(s) without anetnna gate information not antenna diffusion information. They might be disconnected.
-Cell 'user_project_wrapper' has (368) input pin(s) without antenna gate information. They might not be connected to a gate.
-Cell 'user_project_wrapper' has (240) output pin(s) without antenna diffusion information. They might not be driven.
-Running 'KLayout.XOR' at 'user_project_wrapper/runs/25_11_02_18_07/53-klayout-xor'…
-Running XOR with 8 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/53-klayout-xor/klayout-xor.log'[/repr.filename]…
-Running 'Checker.XOR' at 'user_project_wrapper/runs/25_11_02_18_07/54-checker-xor'…
-Check for XOR differences clear.
-Running 'Magic.DRC' at 'user_project_wrapper/runs/25_11_02_18_07/55-magic-drc'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/55-magic-drc/magic-drc.log'[/repr.filename]…
-Running 'KLayout.DRC' at 'user_project_wrapper/runs/25_11_02_18_07/56-klayout-drc'…
+Cell 'user_project_wrapper' has (322) input pin(s) without antenna gate information. They might not be connected to a gate.
+Cell 'user_project_wrapper' has (207) output pin(s) without antenna diffusion information. They might not be driven.
+Gating variable for step 'KLayout.XOR' set to 'False'- the step will be skipped.
+Skipping step 'KLayout vs. Magic XOR'…
+Gating variable for step 'Checker.XOR' set to 'False'- the step will be skipped.
+Skipping step 'XOR Difference Checker'…
+Running 'Magic.DRC' at 'SNN_gesture/runs/25_11_08_21_28/53-magic-drc'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/53-magic-drc/magic-drc.log'[/repr.filename]…
+Running 'KLayout.DRC' at 'SNN_gesture/runs/25_11_08_21_28/54-klayout-drc'…
 Running KLayout DRC with 8 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/56-klayout-drc/klayout-drc.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/56-klayout-drc/xml_drc_report_to_json.log'[/repr.filename]…
-Running 'Checker.MagicDRC' at 'user_project_wrapper/runs/25_11_02_18_07/57-checker-magicdrc'…
-Check for Magic DRC errors clear.
-Running 'Checker.KLayoutDRC' at 'user_project_wrapper/runs/25_11_02_18_07/58-checker-klayoutdrc'…
-Check for KLayout DRC errors clear.
-Running 'Magic.SpiceExtraction' at 'user_project_wrapper/runs/25_11_02_18_07/59-magic-spiceextraction'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/59-magic-spiceextraction/magic-spiceextraction.log'[/repr.filename]…
-Running 'Checker.IllegalOverlap' at 'user_project_wrapper/runs/25_11_02_18_07/60-checker-illegaloverlap'…
-Check for Magic Illegal Overlap errors clear.
-Running 'Netgen.LVS' at 'user_project_wrapper/runs/25_11_02_18_07/61-netgen-lvs'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_02_18_07/61-netgen-lvs/netgen-lvs.log'[/repr.filename]…
-Running 'Checker.LVS' at 'user_project_wrapper/runs/25_11_02_18_07/62-checker-lvs'…
-Check for LVS errors clear.
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/54-klayout-drc/klayout-drc.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/54-klayout-drc/xml_drc_report_to_json.log'[/repr.filename]…
+Running 'Checker.MagicDRC' at 'SNN_gesture/runs/25_11_08_21_28/55-checker-magicdrc'…
+53 Magic DRC errors found.
+Running 'Checker.KLayoutDRC' at 'SNN_gesture/runs/25_11_08_21_28/56-checker-klayoutdrc'…
+20 KLayout DRC errors found.
+Running 'Magic.SpiceExtraction' at 'SNN_gesture/runs/25_11_08_21_28/57-magic-spiceextraction'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/57-magic-spiceextraction/magic-spiceextraction.log'[/repr.filename]…
+Running 'Checker.IllegalOverlap' at 'SNN_gesture/runs/25_11_08_21_28/58-checker-illegaloverlap'…
+66 Magic Illegal Overlap errors found.
+Running 'Netgen.LVS' at 'SNN_gesture/runs/25_11_08_21_28/59-netgen-lvs'…
+Logging subprocess to [repr.filename]'SNN_gesture/runs/25_11_08_21_28/59-netgen-lvs/netgen-lvs.log'[/repr.filename]…
+Running 'Checker.LVS' at 'SNN_gesture/runs/25_11_08_21_28/60-checker-lvs'…
+167 LVS errors found.
 Gating variable for step 'Yosys.EQY' set to 'False'- the step will be skipped.
 Skipping step 'Equivalence Check'…
-Running 'Checker.SetupViolations' at 'user_project_wrapper/runs/25_11_02_18_07/63-checker-setupviolations'…
+Running 'Checker.SetupViolations' at 'SNN_gesture/runs/25_11_08_21_28/61-checker-setupviolations'…
 No setup violations found
-Running 'Checker.HoldViolations' at 'user_project_wrapper/runs/25_11_02_18_07/64-checker-holdviolations'…
+Running 'Checker.HoldViolations' at 'SNN_gesture/runs/25_11_08_21_28/62-checker-holdviolations'…
 No hold violations found
-Running 'Checker.MaxSlewViolations' at 'user_project_wrapper/runs/25_11_02_18_07/65-checker-maxslewviolations'…
+Running 'Checker.MaxSlewViolations' at 'SNN_gesture/runs/25_11_08_21_28/63-checker-maxslewviolations'…
 Max Slew violations found in the following corners:
 * max_ff_n40C_1v95
 * max_ss_100C_1v60
@@ -1777,8 +2298,18 @@ Max Slew violations found in the following corners:
 * nom_ss_100C_1v60
 * nom_tt_025C_1v80
 No max slew violations found
-Running 'Checker.MaxCapViolations' at 'user_project_wrapper/runs/25_11_02_18_07/66-checker-maxcapviolations'…
+Running 'Checker.MaxCapViolations' at 'SNN_gesture/runs/25_11_08_21_28/64-checker-maxcapviolations'…
+Max Cap violations found in the following corners:
+* max_ff_n40C_1v95
+* max_ss_100C_1v60
+* max_tt_025C_1v80
+* min_ff_n40C_1v95
+* min_ss_100C_1v60
+* min_tt_025C_1v80
+* nom_ff_n40C_1v95
+* nom_ss_100C_1v60
+* nom_tt_025C_1v80
 No max cap violations found
-Running 'Misc.ReportManufacturability' at 'user_project_wrapper/runs/25_11_02_18_07/67-misc-reportmanufacturability'…
-Saving views to '/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/runs/25_11_02_18_07/final'…
+Running 'Misc.ReportManufacturability' at 'SNN_gesture/runs/25_11_08_21_28/65-misc-reportmanufacturability'…
+Saving views to '/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/runs/25_11_08_21_28/final'…
 Flow complete.

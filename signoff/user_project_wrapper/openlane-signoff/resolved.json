@@ -105,7 +105,7 @@
     "PNR_EXCLUDED_CELL_FILE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/dependencies/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
     "OUTPUT_CAP_LOAD": 33.442,
     "MAX_FANOUT_CONSTRAINT": 10,
-    "MAX_TRANSITION_CONSTRAINT": 1.5,
+    "MAX_TRANSITION_CONSTRAINT": 0.5,
     "MAX_CAPACITANCE_CONSTRAINT": 0.2,
     "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
     "CLOCK_TRANSITION_CONSTRAINT": 0.15,
@@ -126,7 +126,7 @@
         "sky130_fd_sc_hd__fill*"
     ],
     "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
-    "DESIGN_DIR": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper",
+    "DESIGN_DIR": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture",
     "PDK_ROOT": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/dependencies/pdks",
     "DESIGN_NAME": "user_project_wrapper",
     "PDK": "sky130A",
@@ -135,10 +135,15 @@
     "CLOCK_NET": null,
     "VDD_NETS": [
         "vccd1",
-        "vdda1"
+        "vccd2",
+        "vdda1",
+        "vdda2"
     ],
     "GND_NETS": [
-        "vssd1"
+        "vssd1",
+        "vssd2",
+        "vssa1",
+        "vssa2"
     ],
     "DIE_AREA": [
         0,
@@ -148,6 +153,47 @@
     ],
     "EXTRA_EXCLUDED_CELLS": null,
     "MACROS": {
+        "neuron_core": {
+            "gds": [
+                "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/gds/neuron_core.gds"
+            ],
+            "lef": [
+                "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lef/neuron_core.lef"
+            ],
+            "instances": {
+                "core": {
+                    "location": [
+                        1310,
+                        1785.76
+                    ],
+                    "orientation": "N"
+                }
+            },
+            "vh": [],
+            "nl": [
+                "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/verilog/gl/neuron_core.v"
+            ],
+            "pnl": [],
+            "spef": {
+                "min_*": [
+                    "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/spef/multicorner/neuron_core.min.spef"
+                ],
+                "nom_*": [
+                    "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/spef/multicorner/neuron_core.nom.spef"
+                ],
+                "max_*": [
+                    "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/spef/multicorner/neuron_core.max.spef"
+                ]
+            },
+            "lib": {
+                "*": [
+                    "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib"
+                ]
+            },
+            "spice": [],
+            "sdf": {},
+            "json_h": null
+        },
         "Neuromorphic_X1_wb": {
             "gds": [
                 "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/gds/Neuromorphic_X1_wb.gds"
@@ -156,12 +202,19 @@
                 "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lef/Neuromorphic_X1_wb.lef"
             ],
             "instances": {
-                "mprj": {
+                "mprj1": {
                     "location": [
                         515.18,
-                        514.24
+                        510
                     ],
-                    "orientation": "N"
+                    "orientation": "W"
+                },
+                "mprj": {
+                    "location": [
+                        1715.18,
+                        510
+                    ],
+                    "orientation": "E"
                 }
             },
             "vh": [],
@@ -203,7 +256,7 @@
     "RUN_MAGIC_STREAMOUT": true,
     "RUN_KLAYOUT_STREAMOUT": true,
     "RUN_MAGIC_WRITE_LEF": true,
-    "RUN_KLAYOUT_XOR": true,
+    "RUN_KLAYOUT_XOR": false,
     "RUN_MAGIC_DRC": true,
     "RUN_KLAYOUT_DRC": true,
     "RUN_EQY": false,
@@ -259,15 +312,14 @@
     "ERROR_ON_UNMAPPED_CELLS": true,
     "ERROR_ON_SYNTH_CHECKS": false,
     "ERROR_ON_NL_ASSIGN_STATEMENTS": true,
-    "PNR_SDC_FILE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/signoff.sdc",
-    "SIGNOFF_SDC_FILE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/signoff.sdc",
+    "PNR_SDC_FILE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/signoff.sdc",
+    "SIGNOFF_SDC_FILE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/signoff.sdc",
     "PDN_CONNECT_MACROS_TO_GRID": true,
     "PDN_MACRO_CONNECTIONS": [
-        "mprj vccd1 vssd1 VDDC VSS",
-        "mprj vdda1 vssd1 VDDA VSS"
+        "mprj vccd2 vssd2 VPWR VGND"
     ],
     "PDN_ENABLE_GLOBAL_CONNECTIONS": true,
-    "FP_DEF_TEMPLATE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def",
+    "FP_DEF_TEMPLATE": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/SNN_gesture/fixed_dont_change/user_project_wrapper.def",
     "STA_MACRO_PRIORITIZE_NL": true,
     "STA_MAX_VIOLATOR_COUNT": null,
     "EXTRA_SPEFS": null,
@@ -294,25 +346,25 @@
     "FP_PDN_VERTICAL_HALO": 10,
     "FP_PDN_MULTILAYER": true,
     "FP_PDN_RAIL_OFFSET": 0,
-    "FP_PDN_VWIDTH": 6,
-    "FP_PDN_HWIDTH": 6,
+    "FP_PDN_VWIDTH": 3.1,
+    "FP_PDN_HWIDTH": 3.1,
     "FP_PDN_VSPACING": 15.5,
     "FP_PDN_HSPACING": 15.5,
     "FP_PDN_VPITCH": 180,
     "FP_PDN_HPITCH": 180,
-    "FP_PDN_VOFFSET": 20,
-    "FP_PDN_HOFFSET": 46,
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
     "FP_PDN_CORE_RING_VWIDTH": 3.1,
     "FP_PDN_CORE_RING_HWIDTH": 3.1,
     "FP_PDN_CORE_RING_VSPACING": 1.7,
     "FP_PDN_CORE_RING_HSPACING": 1.7,
-    "FP_PDN_CORE_RING_VOFFSET": 8,
-    "FP_PDN_CORE_RING_HOFFSET": 8,
+    "FP_PDN_CORE_RING_VOFFSET": 12.45,
+    "FP_PDN_CORE_RING_HOFFSET": 12.45,
     "FP_PDN_RAIL_LAYER": "met1",
     "FP_PDN_RAIL_WIDTH": 0.48,
     "FP_PDN_HORIZONTAL_LAYER": "met5",
     "FP_PDN_VERTICAL_LAYER": "met4",
-    "FP_PDN_CFG": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/user_project_wrapper/pdn_override_2.tcl",
+    "FP_PDN_CFG": null,
     "ROUTING_OBSTRUCTIONS": null,
     "RT_CLOCK_MIN_LAYER": null,
     "RT_CLOCK_MAX_LAYER": null,
@@ -347,9 +399,9 @@
     "PL_TIME_DRIVEN": true,
     "PL_ROUTABILITY_DRIVEN": true,
     "PL_ROUTABILITY_OVERFLOW_THRESHOLD": null,
-    "ERROR_ON_PDN_VIOLATIONS": true,
+    "ERROR_ON_PDN_VIOLATIONS": false,
     "DIODE_PADDING": null,
-    "GRT_ALLOW_CONGESTION": false,
+    "GRT_ALLOW_CONGESTION": true,
     "GRT_ANTENNA_ITERS": 3,
     "GRT_OVERFLOW_ITERS": 50,
     "GRT_ANTENNA_MARGIN": 10,
@@ -385,7 +437,7 @@
     "CTS_MAX_SLEW": null,
     "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
     "PL_RESIZER_SETUP_SLACK_MARGIN": 0.05,
-    "PL_RESIZER_HOLD_MAX_BUFFER_PCT": 50,
+    "PL_RESIZER_HOLD_MAX_BUFFER_PCT": 40,
     "PL_RESIZER_SETUP_MAX_BUFFER_PCT": 50,
     "PL_RESIZER_ALLOW_SETUP_VIOS": false,
     "PL_RESIZER_GATE_CLONING": true,
@@ -396,21 +448,21 @@
     "GRT_DESIGN_REPAIR_MAX_CAP_PCT": 10,
     "DIODE_ON_PORTS": "none",
     "HEURISTIC_ANTENNA_THRESHOLD": 90,
-    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.05,
+    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.1,
     "GRT_RESIZER_SETUP_SLACK_MARGIN": 0.025,
-    "GRT_RESIZER_HOLD_MAX_BUFFER_PCT": 50,
+    "GRT_RESIZER_HOLD_MAX_BUFFER_PCT": 40,
     "GRT_RESIZER_SETUP_MAX_BUFFER_PCT": 50,
     "GRT_RESIZER_ALLOW_SETUP_VIOS": false,
     "GRT_RESIZER_GATE_CLONING": true,
     "GRT_RESIZER_RUN_GRT": true,
     "GRT_RESIZER_FIX_HOLD_FIRST": false,
-    "DRT_THREADS": 1,
+    "DRT_THREADS": null,
     "DRT_MIN_LAYER": null,
     "DRT_MAX_LAYER": null,
     "DRT_OPT_ITERS": 64,
-    "ERROR_ON_TR_DRC": true,
+    "ERROR_ON_TR_DRC": false,
     "IGNORE_DISCONNECTED_MODULES": [
-        "user_project_wrapper"
+        "sky130_fd_sc_hd__conb_1"
     ],
     "ERROR_ON_DISCONNECTED_PINS": true,
     "ERROR_ON_LONG_WIRE": true,
@@ -1134,7 +1186,7 @@
         "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__xor3_2.mag",
         "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/dependencies/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__xor3_4.mag"
     ],
-    "MAGIC_CAPTURE_ERRORS": false,
+    "MAGIC_CAPTURE_ERRORS": true,
     "MAGIC_ZEROIZE_ORIGIN": false,
     "MAGIC_DISABLE_CIF_INFO": true,
     "MAGIC_MACRO_STD_CELL_SOURCE": "macro",
@@ -1161,18 +1213,18 @@
     },
     "KLAYOUT_DRC_THREADS": null,
     "ERROR_ON_MAGIC_DRC": false,
-    "ERROR_ON_KLAYOUT_DRC": true,
-    "MAGIC_EXT_USE_GDS": true,
+    "ERROR_ON_KLAYOUT_DRC": false,
+    "MAGIC_EXT_USE_GDS": false,
     "MAGIC_EXT_ABSTRACT_CELLS": null,
     "MAGIC_NO_EXT_UNIQUE": false,
     "MAGIC_EXT_SHORT_RESISTOR": false,
     "MAGIC_EXT_ABSTRACT": false,
     "MAGIC_FEEDBACK_CONVERSION_THRESHOLD": 10000,
-    "ERROR_ON_ILLEGAL_OVERLAPS": true,
+    "ERROR_ON_ILLEGAL_OVERLAPS": false,
     "NETGEN_SETUP": "/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/dependencies/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl",
     "LVS_INCLUDE_MARCO_NETLISTS": false,
     "LVS_FLATTEN_CELLS": null,
-    "ERROR_ON_LVS_ERROR": true,
+    "ERROR_ON_LVS_ERROR": false,
     "EQY_SCRIPT": null,
     "EQY_FORCE_ACCEPT_PDK": false,
     "TIMING_VIOLATION_CORNERS": [
@@ -1187,7 +1239,7 @@
         ""
     ],
     "meta": {
-        "version": 2,
+        "version": 1,
         "flow": null,
         "substituting_steps": null,
         "step": null,

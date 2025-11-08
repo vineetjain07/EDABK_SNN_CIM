@@ -4,6 +4,11 @@ Clock Skew (Setup)
 ============================================================================
 ======================= min_ff_n40C_1v95 Corner ===================================
 
-Clock clk
-No launch/capture paths found.
+Clock wb_clk_i
+6.524555 source latency core/_2245_/CLK ^
+-5.587883 target latency core/_2255_/CLK ^
+0.250000 clock uncertainty
+-0.920000 CRPR
+--------------
+0.266672 setup skew
 

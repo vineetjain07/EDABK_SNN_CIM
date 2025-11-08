@@ -28,38 +28,32 @@ if {![catch {ord::get_db_block}]} {
 set_voltage_domain -name CORE -power $::env(VDD_NET) -ground $::env(GND_NET) \
   -secondary_power $secondary
 
-# 4) Core PDN grid & ring (met4/met5); bring ring further INSIDE the core
+# 4) Core PDN grid & ring (met4/met5); keep ring INSIDE die (8 Âµm)
 define_pdn_grid -name core -starts_with POWER -voltage_domain CORE
 
-# Use negative offset or larger value to pull ring away from die boundary
-# Try 0 first to see if it aligns with core area boundary
+# Older PDNGen accepts 2 numbers for -core_offset (horz vert). If yours
+# needs 4 numbers (l b r t), change "8 8" to "8 8 8 8".
 add_pdn_ring -grid core \
   -layers   "met4 met5" \
   -widths   "6 6" \
   -spacings "2 2" \
-  -core_offsets 5
+  -core_offset "8 8"
 
-add_pdn_stripe -grid core -layer met1 -width 0.48 -offset 80 -followpins -starts_with POWER
+# 5) Stripes: include MET3 to land on macro MET3 pins
+#    Offsets/pitches chosen to hit your LEF rectangles.
+add_pdn_stripe -grid core -layer met3 -width 6 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
+add_pdn_stripe -grid core -layer met4 -width 6 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
+add_pdn_stripe -grid core -layer met5 -width 6 -pitch 180 -offset 46 -starts_with POWER -extend_to_core_ring
 
-# Minimal MET2: only 1-2 thin stripes for connectivity, positioned at die edges
-# Use narrow width (1.6um) and place near boundaries where routing is lighter
-add_pdn_stripe -grid core -layer met2 -width 6 -pitch 800 -offset 100 -starts_with POWER
-
-# 5) Power distribution on upper metals
-# Remove -extend_to_core_ring to prevent stripes from overlapping edge pins
-add_pdn_stripe -grid core -layer met3 -width 8 -pitch 180 -offset 20 -starts_with POWER
-add_pdn_stripe -grid core -layer met4 -width 8 -pitch 180 -offset 20 -starts_with POWER 
-add_pdn_stripe -grid core -layer met5 -width 8 -pitch 180 -offset 46 -starts_with POWER -extend_to_core_ring
-
-# 6) Macro grid
+# 6) Macro grid so PDNGen stitches at instance "mprj"
 define_pdn_grid -macro -default -name macro -starts_with POWER -halo "5 5"
 
-# 7) Sequential layer connections with high max_rows to minimize via density
-add_pdn_connect -grid core  -layers "met1 met2" 
-add_pdn_connect -grid core  -layers "met2 met3"
+# 7) Stitch layers so MET3 pins connect up to ring/upper metals
 add_pdn_connect -grid core  -layers "met3 met4"
 add_pdn_connect -grid core  -layers "met4 met5"
 add_pdn_connect -grid macro -layers "met3 met4"
 
-
+# 8) Build the PDN
+pdngen
+# -----------------------------------------------------------
 

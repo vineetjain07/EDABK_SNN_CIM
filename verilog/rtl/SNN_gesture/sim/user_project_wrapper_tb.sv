@@ -172,10 +172,10 @@ module user_project_wrapper_tb();
   always #0.5 wb_clk_i = ~wb_clk_i;
 
   reg [NUM_NEURON-1:0] connection [0:NUM_AXON-1];
-  initial $readmemb("C:/Users/Admin/Downloads/NVM_ReRAM_ChipFoundry/NVM_neuron_core_64x64/mem/connection/connection_000.txt",connection);
+  initial $readmemb("./mem/connection/connection_000.txt",connection);
 
   reg [31:0] stimuli [0:NUM_AXON/2-1];
-  initial $readmemb("C:/Users/Admin/Downloads/NVM_ReRAM_ChipFoundry/NVM_neuron_core_64x64/mem/stimuli/stimuli.txt", stimuli);
+  initial $readmemb("./mem/stimuli/stimuli.txt", stimuli);
 
   integer row_i,col_i, phase_i;
   reg [4:0] row;

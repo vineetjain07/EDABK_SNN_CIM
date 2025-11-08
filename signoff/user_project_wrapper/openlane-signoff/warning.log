@@ -1,21 +1,399 @@
-9 Lint warnings found.
+18 Lint warnings found.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Cell 'Neuromorphic_X1_wb' has (91) input pin(s) without antenna gate information. They might not be connected to a gate.
-Cell 'Neuromorphic_X1_wb' has (34) output pin(s) without antenna diffusion information. They might not be driven.
+Cell 'neuron_core' has (3) inout pin(s) without anetnna gate information not antenna diffusion information. They might be disconnected.
+Cell 'neuron_core' has (151) input pin(s) without antenna gate information. They might not be connected to a gate.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [PDN-0239] Core ring shape falls outside the die bounds.
+[PDN-0110] No via inserted between met4 and met5 at (1331.0400, 2174.3300) - (1332.6400, 2174.9600) on vccd1
+[PDN-0110] No via inserted between met4 and met5 at (1484.6400, 2174.3300) - (1486.2400, 2174.9600) on vccd1
+[PDN-0110] No via inserted between met4 and met5 at (1638.2400, 2174.3300) - (1639.8400, 2174.9600) on vccd1
+[PSM-0038] Unconnected node on net vccd1 at location (553.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (555.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (559.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (718.610um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (718.610um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (724.610um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (724.610um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (725.890um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (725.890um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (731.890um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (731.890um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (733.170um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (733.170um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (739.170um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (739.170um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (740.450um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (740.450um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (746.450um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (746.450um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (747.730um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (747.730um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (753.730um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (753.730um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (755.010um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (755.010um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (761.010um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (761.010um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (762.290um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (762.290um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (768.290um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (768.290um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (769.570um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (769.570um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (775.570um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (775.570um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (776.850um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (776.850um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (782.850um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (782.850um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (784.130um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (784.130um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (790.130um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (790.130um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (791.410um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (791.410um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (797.410um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (797.410um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (798.690um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (798.690um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (804.690um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (804.690um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (805.970um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (805.970um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (811.970um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (811.970um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (813.250um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (813.250um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (819.250um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (819.250um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (820.530um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (820.530um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (826.530um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (826.530um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (827.810um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (827.810um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (833.810um, 548.880um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (833.810um, 1208.022um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (844.255um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (845.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1149.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1228.035um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1328.035um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1418.410um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1761.950um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1852.325um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (1952.325um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2030.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2334.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2336.105um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2346.550um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2346.550um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2352.550um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2352.550um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2353.830um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2353.830um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2359.830um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2359.830um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2361.110um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2361.110um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2367.110um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2367.110um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2368.390um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2368.390um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2374.390um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2374.390um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2375.670um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2375.670um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2381.670um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2381.670um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2382.950um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2382.950um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2388.950um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2388.950um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2390.230um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2390.230um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2396.230um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2396.230um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2397.510um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2397.510um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2403.510um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2403.510um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2404.790um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2404.790um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2410.790um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2410.790um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2412.070um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2412.070um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2418.070um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2418.070um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2419.350um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2419.350um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2425.350um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2425.350um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2426.630um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2426.630um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2432.630um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2432.630um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2433.910um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2433.910um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2439.910um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2439.910um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2441.190um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2441.190um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2447.190um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2447.190um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2448.470um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2448.470um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2454.470um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2454.470um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2455.750um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2455.750um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2461.750um, 571.977um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2461.750um, 1231.120um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2621.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2625.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vccd1 at location (2627.335um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VDDC at location (796.695um, 879.875um).
+[PSM-0039] Unconnected instance mprj/VDDC at location (2383.664um, 900.124um).
+Grid check for vccd1 failed: PSM-0069
+[PSM-0038] Unconnected node on net vdda1 at location (884.600um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (887.600um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (904.220um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (906.830um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (912.735um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (919.195um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (925.660um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (950.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (953.070um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (955.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (960.070um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2220.290um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2224.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2227.290um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2229.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2254.700um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2261.165um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2267.625um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2273.530um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2276.140um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2292.760um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vdda1 at location (2295.760um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VDDA at location (923.647um, 890.000um).
+[PSM-0039] Unconnected instance mprj/VDDA at location (2256.712um, 890.000um).
+Grid check for vdda1 failed: PSM-0069
+[PSM-0038] Unconnected node on net vssd1 at location (557.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (561.025um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (565.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (567.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (569.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (571.390um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (590.705um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (600.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (602.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (604.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (606.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (608.250um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (613.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (615.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (617.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (621.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (623.745um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (628.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (630.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (632.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (636.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (638.960um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (642.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (644.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (648.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (650.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (652.790um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (661.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (663.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (667.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (669.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (701.245um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (713.825um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (721.610um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (721.610um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (728.890um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (728.890um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (736.170um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (736.170um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (743.450um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (743.450um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (750.730um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (750.730um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (758.010um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (758.010um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (765.290um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (765.290um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (772.570um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (772.570um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (779.850um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (779.850um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (787.130um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (787.130um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (794.410um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (794.410um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (801.690um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (801.690um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (808.970um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (808.970um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (816.250um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (816.250um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (823.530um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (823.530um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (830.810um, 634.605um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (830.810um, 1113.297um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (836.185um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (841.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (849.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (857.755um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (871.330um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (873.630um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (890.425um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (897.115um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (909.850um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (915.730um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (940.795um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (977.580um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1001.460um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1004.160um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1028.040um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1030.740um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1054.620um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1057.320um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1081.200um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1083.900um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1107.780um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1153.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1231.635um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1331.635um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1422.010um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1758.350um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1848.725um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (1948.725um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2027.015um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2072.580um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2096.460um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2099.160um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2123.040um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2125.740um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2149.620um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2152.320um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2176.200um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2178.900um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2202.780um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2239.565um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2264.630um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2270.510um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2283.245um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2289.935um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2306.730um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2309.030um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2322.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2330.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2338.605um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2344.175um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2349.550um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2349.550um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2356.830um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2356.830um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2364.110um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2364.110um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2371.390um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2371.390um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2378.670um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2378.670um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2385.950um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2385.950um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2393.230um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2393.230um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2400.510um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2400.510um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2407.790um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2407.790um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2415.070um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2415.070um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2422.350um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2422.350um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2429.630um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2429.630um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2436.910um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2436.910um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2444.190um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2444.190um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2451.470um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2451.470um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2458.750um, 666.702um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2458.750um, 1145.395um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2466.535um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2479.115um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2511.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2513.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2517.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2519.345um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2527.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2529.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2531.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2535.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2537.570um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2541.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2543.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2547.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2549.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2551.400um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2556.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2558.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2562.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2564.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2566.615um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2572.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2574.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2576.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2578.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2580.110um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2589.655um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2608.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2610.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2612.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2614.970um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2619.335um, 890.000um), layer: met3.
+[PSM-0038] Unconnected node on net vssd1 at location (2623.335um, 890.000um), layer: met3.
+[PSM-0039] Unconnected instance mprj1/VSS at location (785.207um, 884.293um).
+[PSM-0039] Unconnected instance mprj/VSS at location (2395.152um, 895.706um).
+Grid check for vssd1 failed: PSM-0069
+Bterm vssa2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssa1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda1 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd1 is declared as a 'POWER' pin. It will be ignored.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 All instances are FIXED/FIRM.
 No need to perform global placement.
 Skipping…
+27124 power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) found.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
@@ -855,109 +1233,6 @@ Skipping…
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
@@ -1160,189 +1435,398 @@ Skipping…
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
+[GRT-0041] Net vssd2 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
@@ -1535,8 +2019,26 @@ Skipping…
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] message limit reached, this message will no longer print
+[GRT-0115] Global routing finished with overflow.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
@@ -1548,12 +2050,31 @@ Skipping…
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/neuron_core.lib line 1, library neuron_core already exists.
 [STA-1140] /home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+1 Routing DRC errors found.
 Threshold for Threshold-surpassing long wires is not set. The checker will be skipped.
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
+[RCX-0111] Net 643 wbs_sel_i[3] has a loop at x=1464870 y=719690 , on iterm mprj1/wbs_sel_i[3].
 Cell 'user_project_wrapper' has (29) inout pin(s) without anetnna gate information not antenna diffusion information. They might be disconnected.
-Cell 'user_project_wrapper' has (368) input pin(s) without antenna gate information. They might not be connected to a gate.
-Cell 'user_project_wrapper' has (240) output pin(s) without antenna diffusion information. They might not be driven.
+Cell 'user_project_wrapper' has (322) input pin(s) without antenna gate information. They might not be connected to a gate.
+Cell 'user_project_wrapper' has (207) output pin(s) without antenna diffusion information. They might not be driven.
+53 Magic DRC errors found.
+20 KLayout DRC errors found.
+66 Magic Illegal Overlap errors found.
+167 LVS errors found.
 Max Slew violations found in the following corners:
+* max_ff_n40C_1v95
+* max_ss_100C_1v60
+* max_tt_025C_1v80
+* min_ff_n40C_1v95
+* min_ss_100C_1v60
+* min_tt_025C_1v80
+* nom_ff_n40C_1v95
+* nom_ss_100C_1v60
+* nom_tt_025C_1v80
+Max Cap violations found in the following corners:
 * max_ff_n40C_1v95
 * max_ss_100C_1v60
 * max_tt_025C_1v80
