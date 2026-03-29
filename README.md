@@ -136,30 +136,76 @@ To finalize one classification event, the firmware writes to the **picture-done 
 
 After this point, the firmware can read spikes via Wishbone and interpret them as the output class of the gesture.
 
-## ReRAM SNN Changes and How to Use It
+## ReRAM SNN 1T1R Additions
 
-This repository can also support a **ReRAM-based SNN flow using 1T1R-style neuron/synapse behavior** as an alternative to the original fully digital neuron accumulation path. In this mode, the neuron behavior is represented with programmable ReRAM conductance states and spike-driven accumulation, so the SNN computation more closely matches an in-memory-computing implementation.
+A new **ReRAM-based SNN flow using 1T1R neuron/synapse abstractions** has been added as an optional path for development and verification. This addition is intended for users who want to evaluate a generic ReRAM SNN implementation alongside the original digital flow, without changing the existing baseline RTL structure.
 
-### What changes in this ReRAM SNN flow
+### What was added
 
-- The neuron/synapse behavior is modeled as **ReRAM-based 1T1R cells** instead of purely digital synapse handling.
-- Signed weights are represented using **differential conductance mapping** (positive and negative branches).
-- Spike processing is performed as **current-style accumulation followed by neuron thresholding**, which better reflects a ReRAM CIM implementation.
-- A **cocotb-based verification flow** can be used to validate programming, spike propagation, membrane updates, and output spike generation against a Python reference model.
+The following new files were added:
 
-### How to use it
+```text
+analog_snn/
+├── README.md
+├── reram_snn_32x32.py
+├── reram_snn_32x32_1t1r.py
+└── demo_reram_snn_32x32_1t1r.py
 
-1. Add the ReRAM 1T1R SNN RTL files into the neuron core RTL path.
-2. Use the cocotb testbench to program weights, apply spike inputs, and verify output spikes and membrane behavior.
-3. Use the Python behavioral model as a reference when checking the RTL response.
-4. Keep the existing digital flow if needed, and treat the ReRAM SNN path as an additional verification and implementation option.
+verilog/rtl/neuron_core/hdl/
+├── reram_1t1r_snn_neuron.v
+└── reram_1t1r_snn_array_32x32.v
 
-### Recommended workflow
+verilog/dv/cocotb/reram_1t1r/
+├── README.md
+├── Makefile
+└── test_reram_1t1r.py
+```
 
-- Program the ReRAM SNN weights first.
-- Apply spike vectors frame-by-frame or timestep-by-timestep.
-- Read back spike outputs and neuron states.
-- Compare RTL outputs with the Python behavioral reference model during verification.
+### Purpose of the new ReRAM SNN files
+
+- `analog_snn/reram_snn_32x32.py`  
+  Base behavioral ReRAM crossbar model.
+
+- `analog_snn/reram_snn_32x32_1t1r.py`  
+  1T1R ReRAM SNN behavioral model for 32×32 array-style experiments.
+
+- `analog_snn/demo_reram_snn_32x32_1t1r.py`  
+  Minimal runnable demo showing how to instantiate and execute the Python model.
+
+- `verilog/rtl/neuron_core/hdl/reram_1t1r_snn_neuron.v`  
+  Behavioral RTL abstraction of a ReRAM 1T1R spiking neuron.
+
+- `verilog/rtl/neuron_core/hdl/reram_1t1r_snn_array_32x32.v`  
+  Behavioral RTL abstraction of a 32×32 ReRAM 1T1R SNN array.
+
+- `verilog/dv/cocotb/reram_1t1r/test_reram_1t1r.py`  
+  Cocotb-based verification for the added ReRAM 1T1R SNN RTL.
+
+### How to use the Python ReRAM SNN model
+
+From the repository root:
+
+```bash
+cd analog_snn
+python demo_reram_snn_32x32_1t1r.py
+```
+
+This runs the behavioral 1T1R ReRAM SNN example and prints the resulting output activity.
+
+### How to use the Cocotb verification
+
+From the repository root:
+
+```bash
+cd verilog/dv/cocotb/reram_1t1r
+make
+```
+
+This launches the cocotb-based verification flow for the newly added ReRAM 1T1R SNN RTL files.
+
+### Integration note
+
+These additions are **optional** and are meant to extend the repository with a ReRAM-based SNN path. They do not replace the original digital implementation described above unless the user explicitly chooses to integrate them into the main system path.
 
 
 ## Replicating Locally
