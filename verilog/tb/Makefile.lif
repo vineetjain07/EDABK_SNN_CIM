@@ -1,0 +1,10 @@
+SIM ?= icarus
+TOPLEVEL_LANG ?= verilog
+
+# Now pointing to the SNN_gesture folder!
+VERILOG_SOURCES += $(PWD)/../rtl/SNN_gesture/hdl/nvm_neuron_block.v
+
+TOPLEVEL = nvm_neuron_block
+MODULE = test_neuron
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
