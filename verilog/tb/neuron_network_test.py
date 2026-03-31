@@ -3,12 +3,12 @@ import sys
 from pathlib import Path
 
 import cocotb
-from cocotb.binary import BinaryRepresentation, BinaryValue
+# from cocotb.binary import BinaryRepresentation, BinaryValue
 from cocotb.triggers import Timer
 from cocotb.clock import Clock
 from cocotb.handle import SimHandleBase
 from cocotb.queue import Queue
-from cocotb.runner import get_runner
+# from cocotb.runner import get_runner
 from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles, Join
 from nvm_parameter import *
 from read_file import *
@@ -80,7 +80,7 @@ async def wishbone_read(dut, address, spike_o_matrix=None, pic=0, slice_idx=0, l
     # Read the output data from the DUT
     # The output spike is expected to be reversed (LSB first) for easier indexing.
     # Assumes dut.wbs_dat_o.value returns a BinaryValue
-    output_spike = dut.wbs_dat_o.value.binstr[::-1] 
+    output_spike = dut.wbs_dat_o.value.binstr[::-1] if hasattr(dut.wbs_dat_o.value, 'binstr') else str(dut.wbs_dat_o.value)[::-1] 
     
     # If a spike matrix is provided, parse and store the spike outputs
     if spike_o_matrix is not None:
@@ -434,8 +434,7 @@ async def neuron_network_test(dut):
 
     # --- Final Results Calculation ---
     correct_pic = 0
-    print("\nPrediction:")
-    # Calculate the final predicted class based on the L2 output (e.g., majority voting)
     predict_class = calculate_majority_class(spike_out_layer_2)
+    print(f"\nPrediction: Gesture Class {predict_class}")
         
     print("\nTest Completed.")
