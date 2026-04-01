@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 
 import cocotb
+from rram_neuron_model import conductance_at_age
 # from cocotb.binary import BinaryRepresentation, BinaryValue
 from cocotb.triggers import Timer
 from cocotb.clock import Clock
@@ -209,39 +210,51 @@ def load_connection_matrices(base_path):
 
 async def program_layer_connections(dut, core_idx, layer_conn, NUM_NEURON_LAYER):
     """
-    Programs the connection weights for a single core in a layer (ONCE step).
-    
-    This corresponds to the 'MODE_PROGRAM' operation.
+    Programs the connection weights for a single core in a layer.
+    **INJECTS REAL-WORLD RRAM PHYSICS DECAY BEFORE WRITING**
     """
-    # The nested loops iterate over the structure of the NVM array (e.g., 32x32 array structure)
     for row_i in range(32):
         for col_i in range(32):
             row = row_i
             col = col_i
             
-            # Axon index calculation (based on row[2:0] and col[4:0] equivalent)
-            # The bottom 3 bits of 'row' select the group of axons
             axon_group = (row & 0x07) * 32 
             axon = axon_group + col 
             
-            # Neuron index calculation (based on row[4:3] equivalent)
-            # The next 2 bits of 'row' select the neuron group/block (0, 16, 32, or 48)
             neuron_index_group = (row >> 3) & 0x03
             neuron = neuron_index_group * 16 
             
-            # Extract 16-bit slice from the connection matrix corresponding to the current neuron block
-            # Verilog equivalent: connection[axon][NUM_NEURON_LAYER - (neuron + 16) : NUM_NEURON_LAYER - neuron]
+            # Get the ideal, perfect bits from the text file
             val_slice = layer_conn[axon][NUM_NEURON_LAYER - (neuron + 16):NUM_NEURON_LAYER - neuron] 
-            int_val = list_to_binary(val_slice)
             
-            # Construct the 32-bit data word for NVM Programming
-            # {MODE_PROGRAM(2), row(5), col(5), padding(4), weight_slice(16)}
+            # --- APPLY RRAM DECAY PHYSICS ---
+            simulation_age_s = 5000.0 # Age the chip by 5,000 seconds
+            read_threshold = 1.1      # Normalized conductance threshold to read a '1'
+            
+            degraded_slice = []
+            for ideal_bit in val_slice:
+                if ideal_bit == 1:
+                    # Calculate exactly how much the memory has leaked over 5,000 seconds
+                    g_final = conductance_at_age(age_s=simulation_age_s, state="LRS", modulation="ramp")
+                    
+                    # Does the decayed conductance still cross the read threshold?
+                    if g_final >= read_threshold:
+                        degraded_slice.append(1)
+                    else:
+                        degraded_slice.append(0) # BIT FLIP ERROR! The memory leaked too much.
+                else:
+                    degraded_slice.append(0) # HRS stays 0
+            
+            # Convert the degraded array back into a number for the Wishbone bus
+            int_val = list_to_binary(degraded_slice)
+            # --------------------------------
+            
             data_to_write = (
-                (MODE_PROGRAM << 30) |  # 2 MSBs for MODE
-                (row            << 25) |  # 5 bits for row index
-                (col            << 20) |  # 5 bits for column index
-                (0              << 16) |  # 4 bits padding (0)
-                (int_val)                 # 16 LSBs for the weight slice
+                (MODE_PROGRAM << 30) |  
+                (row            << 25) |  
+                (col            << 20) |  
+                (0              << 16) |  
+                (int_val)                 
             )
 
             await nvm_write(dut, 0x30000000, data_to_write)
