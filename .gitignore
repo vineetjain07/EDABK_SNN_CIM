@@ -37,5 +37,5 @@ counter.v
 training/data/*
 
 # Claude Code internal working files (plans, docs, memory) — not for submission
-.claude/
-.agent
+CLAUDE.md
+.agents/
