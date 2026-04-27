@@ -1,4 +1,4 @@
-`default_nettype none
+// `default_nettype none
 module user_project_wrapper #(
     parameter BITS = 32
 ) (
@@ -40,233 +40,72 @@ module user_project_wrapper #(
     // IRQs
     output [2:0] user_irq
 );
-    wire  [31:0] slave_0_dat_i;
-    wire  [31:0] slave_1_dat_i;
-    wire  [31:0] slave_2_dat_i;
-    wire  [31:0] slave_3_dat_i;
-    wire   [3:0] slave_ack_i;
-    wire        slave_stb_o;
-    wire        slave_cyc_o;
-    wire        slave_we_o;
-    wire [31:0] slave_0_dat_o;
-    wire [31:0] slave_1_dat_o;
-    wire [31:0] slave_2_dat_o;
-    wire [31:0] slave_3_dat_o;
+  parameter [31:0] ADDR_MATCH    = 32'h3000_000C; // only addr can access X1 IP (already defined in nvm_synapse_matrix)
 
+  // ─────────────────────────────────────────────────────────────────────────
+  // HARDWARE LIMITATION — OpenLane / Caravel die-area constraint
+  //
+  // The original design targeted 16 Neuromorphic_X1 ReRAM macros per neuron
+  // core, providing 64 neurons per crossbar tile (16 macros × 4 neuron rows).
+  //
+  // After OpenLane floor-planning on the Caravel 2920×3520 µm user-project
+  // wrapper, only 8 macros fit without violating routing DRC or PDN stripes.
+  // The design is therefore taped out with NUM_OF_MACRO=8, giving:
+  //   - 32 neurons per tile  (8 macros × 4 neuron rows)
+  //   - 8 × 32 = 256 total weights per axon row, not 16 × 32 = 512
+  //
+  // Impact on accuracy: training must target NUM_NEURON=32 (nvm_parameter.py).
+  // The SNN topology (L0=832, L1=256, L2=256) is unchanged — layer widths
+  // remain valid multiples of 32 — but the core count doubles (26/8/8 instead
+  // of 13/4/4 for 16-macro hardware).  See openlane/SNN_gesture/README.md.
+  // ─────────────────────────────────────────────────────────────────────────
 
-    // -----------------------------
-    // Instantiate your hard macro
-    // -----------------------------
-   neuron_core core (
-`ifdef USE_POWER_PINS
-  .VDDC (vccd1),
-  .VDDA (vdda1),
-  .VSS  (vssd1),
-`endif
-
-  // Clocks / resets
-  .wb_clk_i (wb_clk_i),
-  .wb_rst_i (wb_rst_i),
-
-  // Wishbone
-  .wbs_stb_i (wbs_stb_i),
-  .wbs_cyc_i (wbs_cyc_i),
-  .wbs_we_i  (wbs_we_i),
-  .wbs_sel_i (wbs_sel_i),
-  .wbs_dat_i (wbs_dat_i),
-  .wbs_adr_i (wbs_adr_i),
-  .wbs_dat_o (wbs_dat_o),
-  .wbs_ack_o (wbs_ack_o),
-
-  // Slave
-  .slave_0_dat_i  (slave_0_dat_i ),
-  .slave_1_dat_i  (slave_1_dat_i ),
-  .slave_2_dat_i  (slave_2_dat_i ),
-  .slave_3_dat_i  (slave_3_dat_i ),
-  .slave_ack_i  (slave_ack_i ),
-  .slave_stb_o (slave_stb_o),
-  .slave_cyc_o  (slave_cyc_o ),
-  .slave_we_o  (slave_we_o ),
-  .slave_0_dat_o  (slave_0_dat_o ),
-  .slave_1_dat_o  (slave_1_dat_o ),
-  .slave_2_dat_o  (slave_2_dat_o ),
-  .slave_3_dat_o  (slave_3_dat_o )
-
-);
-  Neuromorphic_X1_wb mprj (
+  nvm_neuron_core_256x64 #(
+    .NUM_OF_MACRO(8)   // 8 macros: Caravel area-constrained tapeout configuration
+  ) neuron_core_inst (
     `ifdef USE_POWER_PINS
         .VDDC (vccd1),
         .VDDA (vdda1),
         .VSS  (vssd1),
     `endif
-        .user_clk (wb_clk_i),
-        .user_rst (wb_rst_i),
-        .wb_clk_i (wb_clk_i),
-        .wb_rst_i (wb_rst_i),
+    // MASTER
+    .wb_clk_i (wb_clk_i),
+    .wb_rst_i (wb_rst_i),
+    .wbs_stb_i(wbs_stb_i),
+    .wbs_cyc_i(wbs_cyc_i),
+    .wbs_we_i (wbs_we_i),
+    .wbs_sel_i(wbs_sel_i),
+    .wbs_dat_i(wbs_dat_i),
+    .wbs_adr_i(wbs_adr_i),
+    .wbs_dat_o(wbs_dat_o),
+    .wbs_ack_o(wbs_ack_o),
 
-        .wbs_stb_i (slave_stb_o),
-        .wbs_cyc_i (slave_cyc_o),
-        .wbs_we_i  (slave_we_o),
-        .wbs_sel_i (wbs_sel_i),
-        .wbs_dat_i (wbs_dat_i),
-        .wbs_adr_i (wbs_adr_i),
-        .wbs_dat_o (slave_0_dat_i),
-        .wbs_ack_o (slave_ack_i[0]),
+    // Scan/Test Pins
+    .ScanInCC  (io_in[4]),
+    .ScanInDL  (io_in[1]),
+    .ScanInDR  (io_in[2]),
+    .TM        (io_in[5]),
+    .ScanOutCC (io_out[0]),
 
-        .ScanInCC  (io_in[4]),
-        .ScanInDL  (io_in[1]),
-        .ScanInDR  (io_in[2]),
-        .TM        (io_in[5]),
-        .ScanOutCC (io_out[0]),
+    // Analog Pins
+    .Iref          (analog_io[0]),
+    .Vcc_read      (analog_io[1]),
+    .Vcomp         (analog_io[2]),
+    .Bias_comp2    (analog_io[3]),
+    .Vcc_wl_read   (analog_io[12]),
+    .Vcc_wl_set    (analog_io[5]),
+    .Vbias         (analog_io[6]),
+    .Vcc_wl_reset  (analog_io[7]),
+    .Vcc_set       (analog_io[8]),
+    .Vcc_reset     (analog_io[9]),
+    .Vcc_L         (analog_io[10]),
+    .Vcc_Body      (analog_io[11])
+  );
 
-        .Iref          (analog_io[0]),
-        .Vcc_read      (analog_io[1]),
-        .Vcomp         (analog_io[2]),
-        .Bias_comp2    (analog_io[3]),
-        .Vcc_wl_read   (analog_io[12]),
-        .Vcc_wl_set    (analog_io[5]),
-        .Vbias         (analog_io[6]),
-        .Vcc_wl_reset  (analog_io[7]),
-        .Vcc_set       (analog_io[8]),
-        .Vcc_reset     (analog_io[9]),
-        .Vcc_L         (analog_io[10]),
-        .Vcc_Body      (analog_io[11])
-    );
-
-    // // ------------------------------------------------------------
-    // // Instance 1
-    // // ------------------------------------------------------------
-    Neuromorphic_X1_wb mprj1 (
-    `ifdef USE_POWER_PINS
-        .VDDC (vccd1),
-        .VDDA (vdda1),
-        .VSS  (vssd1),
-    `endif
-        .user_clk (wb_clk_i),
-        .user_rst (wb_rst_i),
-        .wb_clk_i (wb_clk_i),
-        .wb_rst_i (wb_rst_i),
-
-        .wbs_stb_i (slave_stb_o),
-        .wbs_cyc_i (slave_cyc_o),
-        .wbs_we_i  (slave_we_o),
-        .wbs_sel_i (wbs_sel_i),
-        .wbs_dat_i (wbs_dat_i),
-        .wbs_adr_i (wbs_adr_i),
-        .wbs_dat_o (slave_1_dat_i),
-        .wbs_ack_o (slave_ack_i[1]),
-
-
-        .ScanInCC  (io_in[4]),
-        .ScanInDL  (io_in[1]),
-        .ScanInDR  (io_in[2]),
-        .TM        (io_in[5]),
-        .ScanOutCC (io_out[1]),
-
-        .Iref          (analog_io[0]),
-        .Vcc_read      (analog_io[1]),
-        .Vcomp         (analog_io[2]),
-        .Bias_comp2    (analog_io[3]),
-        .Vcc_wl_read   (analog_io[12]),
-        .Vcc_wl_set    (analog_io[5]),
-        .Vbias         (analog_io[6]),
-        .Vcc_wl_reset  (analog_io[7]),
-        .Vcc_set       (analog_io[8]),
-        .Vcc_reset     (analog_io[9]),
-        .Vcc_L         (analog_io[10]),
-        .Vcc_Body      (analog_io[11])
-    );
-
-// // ------------------------------------------------------------
-    // // Instance 2
-    // // ------------------------------------------------------------
-//     Neuromorphic_X1_wb mprj2 (
-//     `ifdef USE_POWER_PINS
-//         .VDDC (vccd1),
-//         .VDDA (vdda1),
-//         .VSS  (vssd1),
-//     `endif
-//         .user_clk (wb_clk_i),
-//         .user_rst (wb_rst_i),
-//         .wb_clk_i (wb_clk_i),
-//         .wb_rst_i (wb_rst_i),
-
-//         .wbs_stb_i (slave_stb_o),
-//         .wbs_cyc_i (slave_cyc_o),
-//         .wbs_we_i  (slave_we_o),
-//         .wbs_sel_i (wbs_sel_i),
-//         .wbs_dat_i (wbs_dat_i),
-//         .wbs_adr_i (wbs_adr_i),
-//         .wbs_dat_o (slave_2_dat_i),
-//         .wbs_ack_o (slave_ack_i[2]),
-
-
-//         .ScanInCC  (io_in[4]),
-//         .ScanInDL  (io_in[1]),
-//         .ScanInDR  (io_in[2]),
-//         .TM        (io_in[5]),
-//         .ScanOutCC (io_out[1]),
-
-//         .Iref          (analog_io[0]),
-//         .Vcc_read      (analog_io[1]),
-//         .Vcomp         (analog_io[2]),
-//         .Bias_comp2    (analog_io[3]),
-//         .Vcc_wl_read   (analog_io[12]),
-//         .Vcc_wl_set    (analog_io[5]),
-//         .Vbias         (analog_io[6]),
-//         .Vcc_wl_reset  (analog_io[7]),
-//         .Vcc_set       (analog_io[8]),
-//         .Vcc_reset     (analog_io[9]),
-//         .Vcc_L         (analog_io[10]),
-//         .Vcc_Body      (analog_io[11])
-//     );
-
-// // // ------------------------------------------------------------
-//     // // Instance 3
-//     // // ------------------------------------------------------------
-//     Neuromorphic_X1_wb mprj3 (
-//     `ifdef USE_POWER_PINS
-//         .VDDC (vccd1),
-//         .VDDA (vdda1),
-//         .VSS  (vssd1),
-//     `endif
-//         .user_clk (wb_clk_i),
-//         .user_rst (wb_rst_i),
-//         .wb_clk_i (wb_clk_i),
-//         .wb_rst_i (wb_rst_i),
-
-//         .wbs_stb_i (slave_stb_o),
-//         .wbs_cyc_i (slave_cyc_o),
-//         .wbs_we_i  (slave_we_o),
-//         .wbs_sel_i (wbs_sel_i),
-//         .wbs_dat_i (wbs_dat_i),
-//         .wbs_adr_i (wbs_adr_i),
-//         .wbs_dat_o (slave_3_dat_i),
-//         .wbs_ack_o (slave_ack_i[3]),
-
-
-//         .ScanInCC  (io_in[4]),
-//         .ScanInDL  (io_in[1]),
-//         .ScanInDR  (io_in[2]),
-//         .TM        (io_in[5]),
-//         .ScanOutCC (io_out[1]),
-
-//         .Iref          (analog_io[0]),
-//         .Vcc_read      (analog_io[1]),
-//         .Vcomp         (analog_io[2]),
-//         .Bias_comp2    (analog_io[3]),
-//         .Vcc_wl_read   (analog_io[12]),
-//         .Vcc_wl_set    (analog_io[5]),
-//         .Vbias         (analog_io[6]),
-//         .Vcc_wl_reset  (analog_io[7]),
-//         .Vcc_set       (analog_io[8]),
-//         .Vcc_reset     (analog_io[9]),
-//         .Vcc_L         (analog_io[10]),
-//         .Vcc_Body      (analog_io[11])
-//     );
-
+    // ------------------------------------------------------------
+    // Note: ReRAM instances are now removed from the top-level 
+    // because nvm_neuron_core_256x64 handles synapses internally.
+    // ------------------------------------------------------------
 
 endmodule
-`default_nettype wire
-
-
+// `default_nettype wire

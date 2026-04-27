@@ -1,0 +1,10 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777245949" />
+    <testcase name="test_single_gesture_classification" classname="test_full_network" file="/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/verilog/tb/snn_gesture/cocotb/test_full_network.py" lineno="193" time="1803.0511252880096" sim_time_ns="190240440.0" ratio_time="105510.28605448556" />
+    <testcase name="test_f16_potential_bounds_check" classname="test_full_network" file="/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/verilog/tb/snn_gesture/cocotb/test_full_network.py" lineno="218" time="7.557868957519531e-05" sim_time_ns="0.0" ratio_time="0.0" />
+    <testcase name="test_f17_padding_isolation" classname="test_full_network" file="/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/verilog/tb/snn_gesture/cocotb/test_full_network.py" lineno="228" time="993.7594513893127" sim_time_ns="190240459.99999997" ratio_time="191435.1201732338" />
+    <testcase name="test_layer_2_dense_connectivity" classname="test_full_network" file="/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/verilog/tb/snn_gesture/cocotb/test_full_network.py" lineno="245" time="9.584426879882812e-05" sim_time_ns="0.0" ratio_time="0.0" />
+    <testcase name="test_multi_gesture_accuracy" classname="test_full_network" file="/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/verilog/tb/snn_gesture/cocotb/test_full_network.py" lineno="252" time="1520.305855512619" sim_time_ns="256494699.99999994" ratio_time="168712.5646921321" />
+  </testsuite>
+</testsuites>

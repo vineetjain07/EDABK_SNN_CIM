@@ -141,20 +141,23 @@ if { $::env(IO_SYNC) } {
 	set_output_delay -min [expr $out_ext_delay + 3.9]  -clock [get_clocks {wb_clk_i}] [get_ports {io_out[*]}]
 }
 
-# --- Treat the hard macro as a pure black box for STA
+# --- Treat the hard macros as pure black boxes for STA
 #     (prevents artificial short paths that cause hold violations)
 
-# Cut all timing arcs inside/through the macro instance "mprj"
-set mprj_cell [get_cells -hierarchical mprj]
-if {[llength $mprj_cell]} {
-    set_disable_timing $mprj_cell
-
-    # Extra safety: also cut any paths that pass through macro pins
-    set mprj_pins [get_pins -hierarchical mprj/*]
-    if {[llength $mprj_pins]} {
-        set_false_path -through $mprj_pins
-    }
+# Cut all timing arcs inside/through the Neuromorphic_X1 macro instances
+set x1_macros [get_cells -hierarchical -filter "ref_name == Neuromorphic_X1"]
+if {[llength $x1_macros]} {
+    set_disable_timing $x1_macros
+    set_false_path -through [get_pins -of_objects $x1_macros]
 }
 
 # Output loads
 set_load 0.19 [all_outputs]
+
+# --- Slew / Transition Refinements
+# 1) Relax transition checks on Analog Bias lines (DC references)
+set_max_transition 10 [get_ports analog_io*]
+
+# 2) Model the driver for digital inputs to help Resizer fix slews (like ScanInDL)
+# Using a medium-strength inverter as a proxy for the Caravel IO driver
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin Y [all_inputs]

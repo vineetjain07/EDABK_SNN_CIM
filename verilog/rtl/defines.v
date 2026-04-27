@@ -1,3 +1,4 @@
+
 // SPDX-FileCopyrightText: 2020 Efabless Corporation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,12 +20,12 @@
 // Global parameters
 `define __GLOBAL_DEFINE_H
 
-`define MPRJ_IO_PADS_1 19	/* number of user GPIO pads on user1 side */
-`define MPRJ_IO_PADS_2 19	/* number of user GPIO pads on user2 side */
+`define MPRJ_IO_PADS_1 19 /* number of user GPIO pads on user1 side */
+`define MPRJ_IO_PADS_2 19 /* number of user GPIO pads on user2 side */
 `define MPRJ_IO_PADS (`MPRJ_IO_PADS_1 + `MPRJ_IO_PADS_2)
 
-`define MPRJ_PWR_PADS_1 2	/* vdda1, vccd1 enable/disable control */
-`define MPRJ_PWR_PADS_2 2	/* vdda2, vccd2 enable/disable control */
+`define MPRJ_PWR_PADS_1 2 /* vdda1, vccd1 enable/disable control */
+`define MPRJ_PWR_PADS_2 2 /* vdda2, vccd2 enable/disable control */
 `define MPRJ_PWR_PADS (`MPRJ_PWR_PADS_1 + `MPRJ_PWR_PADS_2)
 
 // Analog pads are only used by the "caravan" module and associated
@@ -62,5 +63,43 @@
 `define MGMT_INIT 1'b0
 `define OENB_INIT 1'b0
 `define DM_INIT 3'b001
+
+// ------------------------------------------------------------
+// SNN Gesture Core Parameters (from nvm_parameter.py)
+// ------------------------------------------------------------
+`define PERIOD              20
+`define MODE_PROGRAM        2'b11
+`define MODE_READ           2'b01
+`define MEM_HIGH            8'b11111111
+`define MEM_LOW             8'b00000000
+`define WR_Dly              200
+`define RD_Dly              44
+`define NUM_AXON            256
+`define NUM_NEURON          64
+
+`define WB_DATAWIDTH        32
+`define NUM_CLASS           12
+`define NUM_VOTES           240
+`define SUM_OF_PICS         5
+
+`define NUM_AXON_LAYER_0    256
+`define NUM_NEURONS_LAYER_0 832
+`define NUM_NEURONS_LAYER_1 256
+`define NUM_NEURONS_LAYER_2 256
+
+`define NUM_CORES_LAYER_0   13
+`define NUM_CORES_LAYER_1   4
+`define NUM_CORES_LAYER_2   4
+
+`define NUM_AXON_LAYER_1    208
+`define NUM_AXON_LAYER_2    256
+
+`define NUM_SLICE            8
+`define NUM_INST_WORD        16
+`define NUM_NEURON_PER_SLICE 32
+`define NUM_STIMULI_WORD     128
+
+`define NEURON_THRESHOLD     4
+`define NEURON_LEAK_SHIFT    16
 
 `endif // __GLOBAL_DEFINE_H

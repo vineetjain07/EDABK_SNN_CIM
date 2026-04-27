@@ -1,7 +1,8 @@
-# ReRAM 1T1R SNN model
+# ReRAM 1T1R SNN Model (Experimental)
 
-This directory contains a Python behavioral model for a 32×32 **1T1R ReRAM**
-crossbar used as the synaptic front end of a spiking neural network.
+⚠️ **Note**: This is an **optional research path** and NOT part of the main project submission. It provides a Python behavioral model for exploring 1T1R ReRAM dynamics separately from the primary digital design in `verilog/rtl/SNN_gesture/`.
+
+This directory contains a Python behavioral model for a 32×32 **1T1R ReRAM** crossbar used as the synaptic front end of a spiking neural network.
 
 ## Files
 

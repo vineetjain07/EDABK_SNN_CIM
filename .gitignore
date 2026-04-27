@@ -16,7 +16,8 @@
 .venv/
 /venv/
 /venv-cocotb/
-/env
+training/venv/
+/env/
 __pycache__/
 *.pyc
 build/
@@ -32,3 +33,9 @@ test/
 temp.v
 counter.v
 *_origin.*
+
+training/data/*
+
+# Claude Code internal working files (plans, docs, memory) — not for submission
+.claude/
+.agent

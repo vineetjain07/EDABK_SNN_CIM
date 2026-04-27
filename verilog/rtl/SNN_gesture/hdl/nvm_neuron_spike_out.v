@@ -1,3 +1,14 @@
+// -----------------------------------------------------------------------------
+// nvm_neuron_spike_out — Spike storage and readback SRAM
+//
+// This module provides a small SRAM (4x16 bits) to store the output spikes of 
+// 64 neurons. Spikes are latched from the neuron block on picture_done and 
+// can be read back by the host via the Wishbone interface.
+//
+// Address Mapping (Local):
+//   - 0x1000: Returns neurons 0-31 (packed as {16'h0, spikes[15:0], 16'h0, ...})
+//   - Readback returns two 16-bit spike words concatenated.
+// -----------------------------------------------------------------------------
 module nvm_neuron_spike_out (
   // Wishbone slave interface
   input             wb_clk_i,  // Clock
@@ -12,29 +23,28 @@ module nvm_neuron_spike_out (
   output reg [31:0] wbs_dat_o // Data output
   );
 
-  reg   [3:0] sram [15:0]; // storage for spikes (64 neurons)
-  wire [15:0] addr;        // which of sixteen array above
-  assign addr = wbs_adr_i[3:0];
+  reg        [15:0] sram [3:0]; // storage for spikes (64 neurons)
+  wire        [1:0] addr;       // which of four array above
+  assign addr = wbs_adr_i[2:1];
 
   always @(posedge wb_clk_i or posedge wb_rst_i) begin
     if (wb_rst_i) begin
       wbs_ack_o <= 1'b0;
       wbs_dat_o <= 32'b0;
-      sram[0] <= 4'b0; sram[1] <= 4'b0; sram[2] <= 4'b0; sram[3] <= 4'b0;
-      sram[4] <= 4'b0; sram[5] <= 4'b0; sram[6] <= 4'b0; sram[7] <= 4'b0;
-      sram[8] <= 4'b0; sram[9] <= 4'b0; sram[10]<= 4'b0; sram[11]<= 4'b0;
-      sram[12]<= 4'b0; sram[13]<= 4'b0; sram[14]<= 4'b0; sram[15]<= 4'b0;
+      sram[0]   <= 16'b0;
+      sram[1]   <= 16'b0;
+      sram[2]   <= 16'b0;
+      sram[3]   <= 16'b0;
     end
     else if (wbs_cyc_i && wbs_stb_i) begin
         wbs_ack_o <= 1'b1;
         if (wbs_we_i) begin
           // Byte-specific writes based on wbs_sel_i
-          if (wbs_sel_i[0]) sram[addr] <= wbs_dat_i[3:0];
+          if (wbs_sel_i[0]) sram[addr][7:0] <= wbs_dat_i[7:0];
+          if (wbs_sel_i[1]) sram[addr][15:8] <= wbs_dat_i[15:8];
         end
-        else wbs_dat_o <= {
-          sram[addr+7],sram[addr+6],sram[addr+5],sram[addr+4],
-          sram[addr+3],sram[addr+2],sram[addr+1],sram[addr]
-        };
+        // Force 2-bit wrap-around to prevent OOB sram[4] and simulation X-propagation.
+        else wbs_dat_o <= {sram[(addr+1) & 2'b11], sram[addr]};
     end
     else begin
       wbs_ack_o <= 1'b0; 

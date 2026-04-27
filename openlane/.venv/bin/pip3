@@ -1,4 +1,4 @@
-#!/home/srnk/HUST/projects/EDABK/EDABK_SNN_CIM/openlane/.venv/bin/python3
+#!/home/vj07/Desktop/projects/open_source/Chipfoundary/EDABK_SNN_CIM/openlane/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

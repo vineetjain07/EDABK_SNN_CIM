@@ -28,6 +28,8 @@ export LIBRELANE_RUN_TAG := $(shell date '+%y_%m_%d_%H_%M')
 endif
 ifeq ($(origin LIBRELANE_TAG), undefined)
 export CF_LIBRELANE_TAG := CC2509
+# export CF_LIBRELANE_TAG := CI2511
+# export CF_LIBRELANE_TAG := latest_ord
 endif
 
 export CARAVEL_ROOT := $(CARAVEL_ROOT)

@@ -2,9 +2,35 @@
 `timescale 1ns / 1ps
 
 // -----------------------------------------------------------------------------
-// Wishbone shim: expose ONE address (0x3000_000C).
-//  - WB WRITE @ 0x3000_000C  -> send command into core
-//  - WB READ  @ 0x3000_000C  -> get result from core
+// Neuromorphic_X1_Beh — Wishbone shim + behavioral ReRAM core (sim only)
+//
+// This module provides a Wishbone-compatible wrapper around a behavioral model 
+// of a 32x32 ReRAM macro. It is intended for simulation and functional 
+// verification only.
+//
+// The shim exposes a single Wishbone address (ADDR_MATCH = 0x3000_000C) and
+// connects it to the behavioral core (Neuromorphic_X1_beh).
+//
+// Operation modes (set by wbs_dat_i[31:30]):
+//   MODE=11 (PROGRAM): enqueue write command → core_ack fires on enqueue.
+//                      Actual cell write happens WR_Dly=200 cycles later in
+//                      the background engine always-block (sim only).
+//   MODE=01 (READ):    enqueue read command → result lands in op_fifo after
+//                      RD_Dly=44 cycles → core_ack fires when result is popped.
+//
+// ACK timing:
+//   PROGRAM ACK is suppressed at the synapse-matrix level by wbs_we_i_reversed
+//   (see nvm_synapse_matrix.v). This prevents spurious neuron integrations.
+//   READ ACK passes through only when op_fifo has a valid result.
+//
+// Analog pins (Iref, Vcc_*, Vcomp, Vbias, Vcc_Body):
+//   These are pass-through ports to the real IP in the tapeout flow.
+//   In behavioral simulation they are unconnected; the behavioral core ignores
+//   them and uses the digital ip_fifo/op_fifo model instead.
+//
+// DEAD_C0DE:
+//   If a READ is attempted when op_fifo is empty, DO=0xDEAD_C0DE is returned
+//   with core_ack=0, so the master stalls until a result is available.
 // -----------------------------------------------------------------------------
 
 `ifdef USE_POWER_PINS

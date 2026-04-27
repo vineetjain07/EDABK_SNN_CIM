@@ -1,8 +1,25 @@
+"""
+Mixed-Signal Co-Simulation: Analog ReRAM Physics → Digital LIF Verilog
+
+This test bridges two simulation domains:
+  - Analog domain: Samarth's ReRAM physics model (rram_neuron_model) computes
+    conductance values for LRS/HRS states at different ages.
+  - Digital domain: conductance is mapped to a 16-bit integer weight and injected
+    into the cocotb Verilog DUT (nvm_neuron_block or equivalent).
+
+Three scenarios are exercised:
+  A. Fresh LRS  — high conductance → large weight → neuron should fire rapidly.
+  B. Relaxed LRS — conductance decays after 2000 s → slower firing.
+  C. HRS        — low conductance → small weight → little or no firing.
+
+Requires rram_neuron_model to be installed or on PYTHONPATH.
+"""
+
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge, Timer
 
-# IMPORTING SAMARTH'S ANALOG PHYSICS MODEL
+# Analog physics model — conductance(age, state) and readout gain constant
 from rram_neuron_model import conductance_at_age, RRAMModelParams
 
 @cocotb.test()
